@@ -1,0 +1,71 @@
+!
+! fonts for application see DtStdAppFontNames(5)
+!
+XmAddressBook*fontList: -dt-application-medium-r-normal-serif-*-140-*-*-p-*-iso8859-15
+XmAddressBook*XmTextField*fontList: -dt-application-medium-r-normal-serif-*-140-*-*-p-*-iso8859-15
+XmAddressBook*XmText*fontList: -dt-application-medium-r-normal-serif-*-140-*-*-p-*-iso8859-15
+!-dt-application-medium-r-normal-*-12-120-75-75-p-64-iso8859-15
+XmAddressBook*XmRowColumn*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+XmAddressBook*XmLabel*fontList: -dt-application-medium-r-normal-serif-*-140-*-*-p-*iso8859-15
+
+! see DtDtdInterfaceFontNames(5) 
+! -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+XmAddressBook*XmPushButton*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+XmAddressBook*ExitProgram_Dialog*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+DisplayHelp_Popup*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+DisplayHelp_Popup*XmText*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+Print_Popup*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+Search_Popup*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+NameList_Popup*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+Duplicate_Popup*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+BCard_Popup*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+BCard_Popup*XmText*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+Mail_Popup*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+Mail_Popup*XmText*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+XmAddressBook*DisplayVersion_Dialog*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+XmAddressBook*SaveDontExit_Dialog*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+XmAddressBook*SaveAndExit_Dialog*fontList: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-iso8859-15
+!
+! geometry
+!
+!
+! colors: Whatever default set by dtstyle
+!
+
+!
+! keyboard translations to make the text widgets more Emacs-like
+!
+*XmTextField*translations:#override\n\
+                     Meta<Key>BackSpace: delete-previous-word()\n\
+                     Ctrl<Key>d:  delete-next-character()\n\
+                     Ctrl<Key>a:  beginning-of-line()\n\
+                     Ctrl<Key>g:  process-cancel()\n\
+                     Meta<Key>b:  backward-word()\n\
+                     Meta<Key>f:  forward-word()\n\
+                     Meta<Key>a:  select-all()\n\
+                     Ctrl<Key>e:  end-of-line()\n\
+                     Ctrl<Key>f:  forward-character()\n\
+                     Ctrl<Key>b:  backward-character()\n\
+                     <Key>osfDelete:    delete-previous-character()
+
+*XmText*translations:#override\n\
+                     <Key>Return:  newline()\n\
+                     Ctrl<Key>k:   kill-to-end-of-line()\n\
+                     Meta<Key>d:   kill-next-word()\n\
+                     Ctrl<Key>y:   unkill()\n\
+                     Meta<Key>BackSpace: kill-previous-word()\n\
+                     Ctrl<Key>d:  kill-next-character()\n\
+                     Ctrl<Key>a:  beginning-of-line()\n\
+                     Ctrl<Key>g:  process-cancel()\n\
+                     Meta<Key>b:  backward-word()\n\
+                     Meta<Key>f:  forward-word()\n\
+                     Meta<Key>a:  select-all()\n\
+                     Ctrl<Key>e:  end-of-line()\n\
+                     Ctrl<Key>p:  previous-line()\n\
+                     Ctrl<Key>n:  next-line()\n\
+                     Ctrl<Key>f:  forward-character()\n\
+                     Ctrl<Key>b:  backward-character()\n\
+	             <Key>Tab:  next-tab-group()\n\
+                     Ctrl<Key>i:  next-tab-group()\n\
+                     <Key>osfDelete:    delete-previous-character()
+

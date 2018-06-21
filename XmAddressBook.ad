@@ -1,0 +1,132 @@
+!
+! fonts
+!
+XmAddressBook*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+XmAddressBook*XmTextField*fontList: -adobe-helvetica-bold-r-normal--12-120-75-75-p-70-iso8859-1
+XmAddressBook*XmText*fontList: -adobe-helvetica-bold-r-normal--12-120-75-75-p-70-iso8859-1
+!-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+XmAddressBook*XmRowColumn*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+XmAddressBook*XmLabel*fontList: -adobe-helvetica-bold-r-normal--14-100-100-100-p-82-iso8859-1
+
+! -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+XmAddressBook*XmPushButton*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+XmAddressBook*ExitProgram_Dialog*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+DisplayHelp_Popup*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+DisplayHelp_Popup*XmText*fontList: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
+Print_Popup*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+Search_Popup*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+NameList_Popup*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+Duplicate_Popup*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+BCard_Popup*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+BCard_Popup*XmText*fontList: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
+Mail_Popup*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+Mail_Popup*XmText*fontList: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
+XmAddressBook*ExitProgram_Dialog*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+XmAddressBook*DisplayVersion_Dialog*fontList: -adobe-helvetica-medium-o-normal--14-100-100-100-p-78-iso8859-1
+XmAddressBook*SaveDontExit_Dialog*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+XmAddressBook*SaveAndExit_Dialog*fontList: -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+!
+! geometry
+!
+!
+! colors
+!
+!*FileSelector*geometry:  500x400
+XmAddressBook*ErrorMessage*foreground: black
+XmAddressBook*ErrorMessage*background: grey
+XmAddressBook*InfoMessage*foreground: black
+XmAddressBook*InfoMessage*background: grey
+XmAddressBook*FileSelector*foreground: black
+XmAddressBook*FileSelector*background: grey
+
+XmAddressBook*background: grey
+!XmAddressBook*W_RoloForm_Frame*background: grey
+!XmAddressBook*W_RoloForm_Form*background: grey
+
+XmAddressBook*XmTextField*foreground: black
+XmAddressBook*XmTextField*background: mistyrose3
+XmAddressBook*XmText*foreground: black
+XmAddressBook*XmText*background: mistyrose3
+XmAddressBook*XmLabel*foreground: firebrick
+XmAddressBook*XmLabel*background: grey
+
+XmAddressBook*W_Help_Label*foreground: black
+XmAddressBook*W_Help_Label*background: mistyrose3
+
+
+
+XmAddressBook*ExitProgram_Dialog*foreground: black
+XmAddressBook*ExitProgram_Dialog*background: grey
+XmAddressBook*DisplayVersion_Dialog*foreground: black
+XmAddressBook*DisplayVersion_Dialog*background: grey
+XmAddressBook*SaveDontExit_Dialog*foreground: black
+XmAddressBook*SaveDontExit_Dialog*background: grey
+XmAddressBook*SaveAndExit_Dialog*foreground: black
+XmAddressBook*SaveAndExit_Dialog*background: grey
+
+DisplayHelp_Popup*background: grey
+DisplayHelp_Popup*foreground: black
+DisplayHelp_Popup*XmTextField*background: mistyrose3
+DisplayHelp_Popup*XmText*background: mistyrose3
+Search_Popup*foreground: black
+Search_Popup*background: grey
+Search_Popup*XmTextField*background: mistyrose3
+Search_Popup*XmText*background: mistyrose3
+Duplicate_Popup*foreground: black
+Duplicate_Popup*background: grey
+Duplicate_Popup*XmTextField*background: mistyrose3
+Duplicate_Popup*XmText*background: mistyrose3
+Print_Popup*foreground: black
+Print_Popup*background: grey
+Print_Popup*XmTextField*background: mistyrose3
+Print_Popup*XmText*background: mistyrose3
+NameList_Popup*foreground: black
+NameList_Popup*background: grey
+NameList_Popup*XmTextField*background: mistyrose3
+NameList_Popup*XmText*background: mistyrose3
+BCard_Popup*foreground: black
+BCard_Popup*background: grey
+BCard_Popup*XmTextField*background: mistyrose3
+BCard_Popup*XmText*background: mistyrose3
+Mail_Popup*foreground: black
+Mail_Popup*background: grey
+Mail_Popup*XmTextField*background: mistyrose3
+Mail_Popup*XmText*background: mistyrose3
+
+!
+! keyboard translations to make the text widgets more Emacs-like
+!
+*XmTextField*translations:#override\n\
+                     Meta<Key>BackSpace: delete-previous-word()\n\
+                     Ctrl<Key>d:  delete-next-character()\n\
+                     Ctrl<Key>a:  beginning-of-line()\n\
+                     Ctrl<Key>g:  process-cancel()\n\
+                     Meta<Key>b:  backward-word()\n\
+                     Meta<Key>f:  forward-word()\n\
+                     Meta<Key>a:  select-all()\n\
+                     Ctrl<Key>e:  end-of-line()\n\
+                     Ctrl<Key>f:  forward-character()\n\
+                     Ctrl<Key>b:  backward-character()\n\
+                     <Key>osfDelete:    delete-previous-character()
+
+*XmText*translations:#override\n\
+                     <Key>Return:  newline()\n\
+                     Ctrl<Key>k:   kill-to-end-of-line()\n\
+                     Meta<Key>d:   kill-next-word()\n\
+                     Ctrl<Key>y:   unkill()\n\
+                     Meta<Key>BackSpace: kill-previous-word()\n\
+                     Ctrl<Key>d:  kill-next-character()\n\
+                     Ctrl<Key>a:  beginning-of-line()\n\
+                     Ctrl<Key>g:  process-cancel()\n\
+                     Meta<Key>b:  backward-word()\n\
+                     Meta<Key>f:  forward-word()\n\
+                     Meta<Key>a:  select-all()\n\
+                     Ctrl<Key>e:  end-of-line()\n\
+                     Ctrl<Key>p:  previous-line()\n\
+                     Ctrl<Key>n:  next-line()\n\
+                     Ctrl<Key>f:  forward-character()\n\
+                     Ctrl<Key>b:  backward-character()\n\
+	             <Key>Tab:  next-tab-group()\n\
+                     Ctrl<Key>i:  next-tab-group()\n\
+                     <Key>osfDelete:    delete-previous-character()
+

@@ -1,0 +1,156 @@
+#
+# XmAddressBook Makefile
+#
+# Copyright (c) 1994,1995 Boyd C. Fletcher and Old Dominion University
+#
+
+#############################################################################
+#
+#  You may want to change these installation defaults
+#
+#############################################################################
+
+HELP_DIR=/usr/lib/X11/xmaddressbook
+#HELP_DIR=/usr/local/X11/lib/X11/xmaddressbook
+HELP_FILE=xmaddressbook.hlp
+BIN_DIR=/usr/local/X11/bin
+MAN_DIR=/usr/local/X11/man/man1
+APP_DEFAULTS_DIR=/usr/local/X11/lib/X11/app-defaults
+APP_DEFAULTS=XmAddressBook
+MAN_PAGE=xmaddressbook.1
+OWNER=root
+PERMS=711
+INSTALL=cp
+MKDIR=mkdir -p
+RMDIR=rmdir 
+RM=rm -f
+CHMOD=chmod
+CHOWN=chown
+
+#############################################################################
+#
+#  You will need to undefine a set of these for your particular machine
+#  
+#  -DCURSES  -- Should be removed if you don't want a curses interface
+#               and CURSES_LIB should be commented out.
+#
+#############################################################################
+
+#
+# Undefine these if you are using SunOS 4.1.x (Solaris 1.x)
+#
+CFLAGS =  -g -ansi -DCURSES -DSUNOS -Wunused -Wreturn-type -Wpointer-arith -DHELP_FILE=\"$(HELP_DIR)/$(HELP_FILE)\"
+CC = gcc
+INCLUDE= -I/usr/local/X11/include -I/usr/5include 
+CURSES_LIB=-lcurses -ltermcap 
+LIB= -L/usr/local/X11/lib  -lXm -lXt -lX11 -L/usr/5lib $(CURSES_LIB) # X11R5 
+#LIB= -L/usr/local/X11/lib  -lXm -lXt -lX11   -lICE -lXi -lSM -loldX -lXext # X11R6
+
+#
+# Undefine these if you are using SunOS 5.4+ (Solaris 2.4+)
+#
+CFLAGS = -DCURSES -DSOLARIS2  -DHELP_FILE=\"$(HELP_DIR)/$(HELP_FILE)\" 
+CC = cc
+INCLUDE=  -I/usr/openwin/include -I/usr/dt/include
+CURSES_LIB=-lcurses -ltermcap 
+LIB= -ladm -L/usr/dt/lib -lXm  -L/usr/openwin/lib  -lXt -lX11  -L/usr/ccs/lib -lgen -R /usr/openwin/lib:/usr/dt/lib $(CURSES_LIB)
+
+#
+# Undefine these if you are using SunOS 5.3 (Solaris 2.3)
+#
+#CFLAGS = -DCURSES -DSOLARIS2  -DHELP_FILE=\"$(HELP_DIR)/$(HELP_FILE)\" 
+#CC = cc
+#INCLUDE=  -I/usr/openwin/include -I/opt/SUNWmotif/include
+#CURSES_LIB=-lcurses -ltermcap 
+#LIB= -ladm -L/opt/SUNWmotif/lib -lXm  -L/usr/openwin/lib  -lXt -lX11  -L/usr/ccs/lib -lgen -R /usr/openwin/lib:/opt/SUNWmotif/lib $(CURSES_LIB)
+
+
+#
+# Undefine these if you are using IBM AIX 3.2.x. 
+#
+#CFLAGS =  -g -DCURSES -D_BSD=43 -DAIX    -DHELP_FILE=\"$(HELP_DIR)/$(HELP_FILE)\"
+#CC = cc
+#INCLUDE= 
+#CURSES_LIB=-lcurses -ltermcap 
+#LIB= -lXm -lXt -lX11 $(CURSES_LIB)
+
+#
+# Undefine these if you are using SGI IRIX 5.x
+#
+CFLAGS =  -DCURSES -g  -DIRIX  -DHELP_FILE=\"$(HELP_DIR)/$(HELP_FILE)\" 
+CC = cc
+INCLUDE=
+CURSES_LIB=-lcurses -ltermcap 
+LIB=  -lXm_s -lXt_s -lX11_s -lcurses -ltermcap $(CURSES_LIB)
+
+#
+# Undefine these if you are using HP-UX 9.X
+#
+#CFLAGS = -g -Aa -D_INCLUDE_POSIX_SOURCE -DHPUX
+#CC = cc
+#INCLUDE=  -I/usr/include/Motif1.2 -I /usr/include/X11R5 -I /usr/include
+#LIB= -L /usr/lib/Motif1.2 -L /usr/lib/X11R5/ -lXm -lXt -lX11 
+
+#
+# Undefine these if you are using Novell UnixWare 1.1 or 2.0
+#
+#CFLAGS =  -O  -DUNIXWARE  -DHELP_FILE=\"$(HELP_DIR)/$(HELP_FILE)\"
+#CC = cc
+#INCLUDE= -I/usr/X/include
+#LIB=  -lXm -lXt -lX11 -lgen -lnsl
+#
+
+# Undefine these if you are using BSDI 1.x
+#
+#CFLAGS =  -O  -DBSDI  -DHELP_FILE=\"$(HELP_DIR)/$(HELP_FILE)\"
+#CC = cc
+#INCLUDE= -I/usr/X/include
+#LIB=  -lXm -lXt -lX11
+
+#############################################################################
+#
+#  You shouldn't need to change anything below this line.
+#
+#############################################################################
+
+COMPILE.c= $(CC) $(CFLAGS) $(INCLUDE)   
+LINK.c  = $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
+LINT.c  = $(LINT) $(LINTFLAGS) $(CPPFLAGS)
+
+EXEC = xmaddressbook
+
+OBJS = file.o main.o quit.o general.o menu.o help.o list.o search.o print.o error_msg.o\
+       duplicate.o namelist.o goto.o card.o curses.o mail.o preferences.o
+SRCS = file.c main.c quit.c general.c menu.c help.c list.c search.c print.c error_msg.c\
+       duplicate.c namelist.c goto.c card.c curses.c mail.c  preferences.c
+HDRS = general.h menu.h main.h prototypes.h help.h
+
+all   :	 $(OBJS) $(EXEC) 
+
+$(EXEC) : $(OBJS)
+	@echo  "--------- Linking $(EXEC) ---------"
+	$(CC) $(CFLAGS) $(INCLUDE) -o $(EXEC) $(OBJS) $(LINK) $(LIB)
+
+$(OBJS) : $(HDRS) 
+	$(CC) $(CFLAGS) $(INCLUDE) -c $*.c
+
+clean :
+	@echo "--------- Cleaning Up ---------"
+	-(rm -f $(OBJS) $(EXEC) .emacs_boyd )
+
+install :
+	@echo "--------- Installing ---------"
+	-$(MKDIR) $(BIN_DIR)
+	$(INSTALL) $(EXEC) $(BIN_DIR)
+	$(CHOWN) $(OWNER)  $(BIN_DIR)/$(EXEC)
+	$(CHMOD) $(PERMS)  $(BIN_DIR)/$(EXEC)
+	$(INSTALL) $(APP_DEFAULTS)  $(APP_DEFAULTS_DIR)/$(APP_DEFAULTS)
+	-$(MKDIR) $(HELP_DIR)	
+	$(INSTALL) $(HELP_FILE) 	 $(HELP_DIR)/$(HELP_FILE)
+	-$(MKDIR) $(MAN_DIR)	
+	$(INSTALL) $(MAN_PAGE)  $(MAN_DIR)/$(MAN_PAGE)
+		
+uninstall :
+	@echo "--------- Un-Installing ---------"
+	$(RM) $(BIN_DIR)/$(EXEC)
+

@@ -1,0 +1,100 @@
+v1.5.3 05/11/96 - boyd
+
+* Fixed glitch in Postscript printing routine that caused the wrong
+  number of entries to be printed. (found by David_Barr@smtp.rc.trw.com)
+
+v1.5.2 01/05/96 - Martin Zinser (m.zinser@gsi.de) and  boyd
+
+* Added support for VMS (Zinser)
+* changed -c to mean curse mode
+* changed fonts and colors
+
+------ 
+v1.5.1 7/20/95 - boyd
+
+* Fixed colors in name list, business card, and send mail routines
+
+------ 
+v1.5 7/7/95 - boyd
+
+* Added a sending mail feature.
+* Fixed bug in business card when there are no entries.
+* Fixed text exceeds line in curses mode so that it wraps correctly
+* Fixed auto raising when button pressed and window hidden.
+
+------ 
+v1.4 6/30/95 - boyd
+
+* Added a curses interface for searching and viewing the addressbook.
+  Makes those times when you are using a modem easier.
+
+------ 
+v1.3 6/25/95 - boyd
+
+* Changed defaults fonts again (I thought the previous choices looked corney)
+* created misc menu 
+* added a show name list option to misc menu
+* added search and goto to misc menu
+* moved update button to misc menu
+* changed the way goto works. you now get a popup. this is hopefully less 
+  confusing
+* changed print, search, and duplicate to popup dialogs 
+* changed the CLEAR before ADD feature, you should still clear first, but 
+  you can add without clearing.
+* add a "business card" popup so that the whole card could be selected 
+  for pasting (suggested  Forrest Aldrich)
+
+------ 
+v1.2.2 2/6/95 - boyd
+
+* Added ranges to print routines
+* Fixed file closing problem in print.c
+* Fixed WM_DELETE_WINDOW problem in all popup windows
+* Added Text output (print,file)
+* Added Duplication feature (suggested by Michael Coxe)
+* Fixed bug in print routine that caused new entries not be printed
+
+------ 
+v1.2.1 1/23/95 - boyd
+
+* Changed name to XmAddressBook.
+* Minor bug fixes.
+
+------ 
+v1.2 12/8/94 - boyd
+
+* Added the ability for mulitple address book files.
+* Improved error message handling.
+* bug fixes
+
+------ 
+v1.1 11/29/94 - boyd
+
+* Added Imakefile, changed date/time to locale format, removed
+DEFAULT_ADDRESSBOOK_PATH and changed to $HOME (thanks to Richard Lloyd
+<R.K.Lloyd@csc.liv.ac.uk>)
+* Added Fax and Email entries. NOTE: You need to use the -convert1.1
+option to convert your 1.0.X XmAddressBook files to 1.1 XmAddressBook Files.
+* bug fixes
+
+------ 
+v1.0.4 11/28/94 - boyd 
+
+* Changes to font handling
+
+------ 
+v1.0.2 10/28/94 - boyd
+
+* Removed need to have PRINTER &/or LASER environment variables set.
+* Improved search routines.
+
+------ 
+v1.0.1 10/15/94 - boyd
+
+* Minor change to search routines
+* Other minor bug fixes
+
+------ 
+v1.0 10/1/94 - boyd
+
+* Initial Release!

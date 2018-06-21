@@ -1,0 +1,56 @@
+Contact List - "What she wants to do is to be able to keep a record of
+calls made to each person in her rolodex.  She wants to be able to
+query her database for folks she hasn't called or heard from in a
+while, and to be able to scroll through (and even grep through) notes
+made on previous calls so she can pull together status information."
+
+-------------------------------------------------------------------------
+ - when printing, if a field is empty, leave it out of the printout
+   (this may be a question of taste, I'm not sure; maybe an option?)
+
+ - some X resources to control fonts (type and size), printer vs file
+   output by default (i.e. what comes up preselected in the print popup), 
+   etc. would be very nice
+
+-------------------------------------------------------------------------
+
+add better control over output on printing. should be able to select 
+which fields to print.
+
+-------------------------------------------------------------------------
+
+
+ I just compiled XmAddressBook (X11R6/Motif2.0) on a HP system and it runs
+ fine, exept it apparently refuses all 8bit characters.  Is there something
+ I can do to fix that ?
+ 
+
+-------------------------------------------------------------------------
+
+
+"David W. Schuler" <dschuler@VNET.IBM.COM>
+
+
+1)  It would be nice if a "Pager" field could be added for a pager number.
+    Today I can use the comment section, but a separate pager (or maybe
+    "Other" phone number) would make it faster to find the data.
+
+2)  When using the Misc->Show_Name_List function, I have several cards
+    that have only company names and no individual names.  So, these
+    cards show up with a blank "Name".  In the case where the name is
+    blank, would it be possible to perhaps put the Company field into
+    that slot, perhaps bracketed by parens (i.e. "(" and ")" )?
+
+    I use this feature, for instance, when I have a central phone number
+    for a company, and have separate entries for the individual engineers
+    I work with at that company.
+
+3)  When using the Misc->Send_Mail function, I would like to be able to
+    somehow call my own mail program (using the e-mail address from
+    XmAddressBook) rather than the built-in mail shell.  Would there be
+    some way to make an option that when I selected this function it would
+    pass the e-mail address into a command that I wish to use?  (Ultimately
+    I would love to get XmAddressBook to work together with the EXMH mail
+    program.)
+
+-------------------------------------------------------------------------

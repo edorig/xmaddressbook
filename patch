@@ -1,0 +1,1489 @@
+*** card.c~	1995-08-11 00:45:22.000000000 +0200
+--- card.c	2013-05-11 11:46:01.000000000 +0200
+***************
+*** 104,110 ****
+  				       XmNrubberPositioning,True,
+  				       NULL,0);
+    
+!   LabelString = XmStringCreate("Business Card", XmSTRING_DEFAULT_CHARSET),
+    BCard_Label = XtVaCreateManagedWidget("BCard_Label",
+  					xmLabelWidgetClass, 
+  					BCard_Form,
+--- 104,110 ----
+  				       XmNrubberPositioning,True,
+  				       NULL,0);
+    
+!   LabelString = XmStringCreate("Business Card", XmSTRING_OS_CHARSET),
+    BCard_Label = XtVaCreateManagedWidget("BCard_Label",
+  					xmLabelWidgetClass, 
+  					BCard_Form,
+***************
+*** 158,164 ****
+  					    XmNbottomPosition, 90,
+  					    NULL,0);
+      
+!   LabelString = XmStringCreate("Close", XmSTRING_DEFAULT_CHARSET),
+    BCardClose_Button = XtVaCreateManagedWidget("BCardClose_Button",
+  					      xmPushButtonWidgetClass,
+  					      BCard_Form,
+--- 158,164 ----
+  					    XmNbottomPosition, 90,
+  					    NULL,0);
+      
+!   LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+    BCardClose_Button = XtVaCreateManagedWidget("BCardClose_Button",
+  					      xmPushButtonWidgetClass,
+  					      BCard_Form,
+*** duplicate.c~	1995-07-07 22:42:38.000000000 +0200
+--- duplicate.c	2013-05-11 11:46:36.000000000 +0200
+***************
+*** 164,170 ****
+  					    XmNrightAttachment, XmATTACH_FORM,
+  					    NULL,0);
+    
+!   LabelString = XmStringCreate("Entry Number: ", XmSTRING_DEFAULT_CHARSET),
+    Duplicate_Label = XtVaCreateManagedWidget("Duplicate_Label",
+  					    xmLabelWidgetClass, 
+  					    Duplicate_Form2,
+--- 164,170 ----
+  					    XmNrightAttachment, XmATTACH_FORM,
+  					    NULL,0);
+    
+!   LabelString = XmStringCreate("Entry Number: ", XmSTRING_OS_CHARSET),
+    Duplicate_Label = XtVaCreateManagedWidget("Duplicate_Label",
+  					    xmLabelWidgetClass, 
+  					    Duplicate_Form2,
+***************
+*** 195,201 ****
+    XtAddCallback(DuplicateEntryNum_Text, XmNactivateCallback, 
+                  (XtCallbackProc) Duplicate_Confirm, Duplicate_Popup);
+    
+!   LabelString = XmStringCreate("Duplicate n Times: ", XmSTRING_DEFAULT_CHARSET),
+    Duplicate_Label = XtVaCreateManagedWidget("Duplicate_Label",
+  					    xmLabelWidgetClass, 
+  					    Duplicate_Form2,
+--- 195,201 ----
+    XtAddCallback(DuplicateEntryNum_Text, XmNactivateCallback, 
+                  (XtCallbackProc) Duplicate_Confirm, Duplicate_Popup);
+    
+!   LabelString = XmStringCreate("Duplicate n Times: ", XmSTRING_OS_CHARSET),
+    Duplicate_Label = XtVaCreateManagedWidget("Duplicate_Label",
+  					    xmLabelWidgetClass, 
+  					    Duplicate_Form2,
+***************
+*** 238,244 ****
+  						XmNrightAttachment, XmATTACH_FORM,
+  						NULL,0);
+    
+!   LabelString = XmStringCreate("Duplicate", XmSTRING_DEFAULT_CHARSET),
+    DuplicateConfirm_Button = XtVaCreateManagedWidget("DuplicateConfirm_Button",
+  						    xmPushButtonWidgetClass,
+  						    Duplicate_Form,
+--- 238,244 ----
+  						XmNrightAttachment, XmATTACH_FORM,
+  						NULL,0);
+    
+!   LabelString = XmStringCreate("Duplicate", XmSTRING_OS_CHARSET),
+    DuplicateConfirm_Button = XtVaCreateManagedWidget("DuplicateConfirm_Button",
+  						    xmPushButtonWidgetClass,
+  						    Duplicate_Form,
+***************
+*** 256,262 ****
+                  (XtCallbackProc) Duplicate_Confirm, Duplicate_Popup);
+    
+  
+!   LabelString = XmStringCreate("Reset", XmSTRING_DEFAULT_CHARSET),
+    DuplicateReset_Button = XtVaCreateManagedWidget("DuplicateReset_Button",
+  						  xmPushButtonWidgetClass,
+  						  Duplicate_Form,
+--- 256,262 ----
+                  (XtCallbackProc) Duplicate_Confirm, Duplicate_Popup);
+    
+  
+!   LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+    DuplicateReset_Button = XtVaCreateManagedWidget("DuplicateReset_Button",
+  						  xmPushButtonWidgetClass,
+  						  Duplicate_Form,
+***************
+*** 274,280 ****
+                  (XtCallbackProc) Duplicate_Reset, NULL);
+    
+    
+!   LabelString = XmStringCreate("Close", XmSTRING_DEFAULT_CHARSET),
+    DuplicateClose_Button = XtVaCreateManagedWidget("DuplicateClose_Button",
+  					       xmPushButtonWidgetClass,
+  					       Duplicate_Form,
+--- 274,280 ----
+                  (XtCallbackProc) Duplicate_Reset, NULL);
+    
+    
+!   LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+    DuplicateClose_Button = XtVaCreateManagedWidget("DuplicateClose_Button",
+  					       xmPushButtonWidgetClass,
+  					       Duplicate_Form,
+*** error_msg.c~	1994-12-09 00:06:13.000000000 +0100
+--- error_msg.c	2013-05-11 11:47:08.000000000 +0200
+***************
+*** 15,22 ****
+    XmString ErrorMessageXmString;
+    XmString OkXmString;
+  
+!   ErrorMessageXmString = XmStringLtoRCreate(ErrorMessageString, XmSTRING_DEFAULT_CHARSET);
+!   OkXmString = XmStringCreate("Close",XmSTRING_DEFAULT_CHARSET);
+  
+    ErrorMessage_Dialog = XmCreateErrorDialog(W_TopLevel,
+  					    "ErrorMessage",
+--- 15,22 ----
+    XmString ErrorMessageXmString;
+    XmString OkXmString;
+  
+!   ErrorMessageXmString = XmStringLtoRCreate(ErrorMessageString, XmSTRING_OS_CHARSET);
+!   OkXmString = XmStringCreate("Close",XmSTRING_OS_CHARSET);
+  
+    ErrorMessage_Dialog = XmCreateErrorDialog(W_TopLevel,
+  					    "ErrorMessage",
+***************
+*** 58,65 ****
+    XmString InfoMessageXmString;
+    XmString OkXmString;
+  
+!   InfoMessageXmString = XmStringLtoRCreate(InfoMessageString, XmSTRING_DEFAULT_CHARSET);
+!   OkXmString = XmStringCreate("Close",XmSTRING_DEFAULT_CHARSET);
+  
+    InfoMessage_Dialog = XmCreateInformationDialog(W_TopLevel,
+  						 "InfoMessage",
+--- 58,65 ----
+    XmString InfoMessageXmString;
+    XmString OkXmString;
+  
+!   InfoMessageXmString = XmStringLtoRCreate(InfoMessageString, XmSTRING_OS_CHARSET);
+!   OkXmString = XmStringCreate("Close",XmSTRING_OS_CHARSET);
+  
+    InfoMessage_Dialog = XmCreateInformationDialog(W_TopLevel,
+  						 "InfoMessage",
+*** file.c~	1996-01-06 05:21:10.000000000 +0100
+--- file.c	2013-05-11 11:47:30.000000000 +0200
+***************
+*** 574,580 ****
+    int lcv = 0;
+    char *Filename;
+  
+!   if (!XmStringGetLtoR(cbs->value,XmSTRING_DEFAULT_CHARSET,&Filename))
+      {
+        XtUnrealizeWidget(w);
+        return;      
+--- 574,580 ----
+    int lcv = 0;
+    char *Filename;
+  
+!   if (!XmStringGetLtoR(cbs->value,XmSTRING_OS_CHARSET,&Filename))
+      {
+        XtUnrealizeWidget(w);
+        return;      
+***************
+*** 640,646 ****
+    XtVaSetValues(XtParent(W_FileDialog),
+  		XmNtitle,"XmAddressBook File Selector",
+  		NULL,0);
+!   DirString = XmStringCreate((char *)getenv("HOME"), XmSTRING_DEFAULT_CHARSET),
+    XtVaSetValues(W_FileDialog,
+  		XmNtextColumns, 60,
+  		XmNdirectory, DirString,
+--- 640,646 ----
+    XtVaSetValues(XtParent(W_FileDialog),
+  		XmNtitle,"XmAddressBook File Selector",
+  		NULL,0);
+!   DirString = XmStringCreate((char *)getenv("HOME"), XmSTRING_OS_CHARSET),
+    XtVaSetValues(W_FileDialog,
+  		XmNtextColumns, 60,
+  		XmNdirectory, DirString,
+*** goto.c~	1995-07-07 21:41:52.000000000 +0200
+--- goto.c	2013-05-11 11:47:55.000000000 +0200
+***************
+*** 84,90 ****
+  				      Goto_Frame,
+  				      NULL,0);
+    
+!   LabelString = XmStringCreate("Goto Number: ", XmSTRING_DEFAULT_CHARSET),
+    Goto_Label = XtVaCreateManagedWidget("Goto_Label",
+  				       xmLabelWidgetClass, 
+  				       Goto_Form,
+--- 84,90 ----
+  				      Goto_Frame,
+  				      NULL,0);
+    
+!   LabelString = XmStringCreate("Goto Number: ", XmSTRING_OS_CHARSET),
+    Goto_Label = XtVaCreateManagedWidget("Goto_Label",
+  				       xmLabelWidgetClass, 
+  				       Goto_Form,
+***************
+*** 121,127 ****
+  					     XmNrightAttachment, XmATTACH_FORM,
+  					     NULL,0);
+    
+!   LabelString = XmStringCreate("Goto", XmSTRING_DEFAULT_CHARSET),
+    GotoConfirm_Button = XtVaCreateManagedWidget("GotoConfirm_Button",
+  						 xmPushButtonWidgetClass,
+  						 Goto_Form,
+--- 121,127 ----
+  					     XmNrightAttachment, XmATTACH_FORM,
+  					     NULL,0);
+    
+!   LabelString = XmStringCreate("Goto", XmSTRING_OS_CHARSET),
+    GotoConfirm_Button = XtVaCreateManagedWidget("GotoConfirm_Button",
+  						 xmPushButtonWidgetClass,
+  						 Goto_Form,
+***************
+*** 139,145 ****
+                  (XtCallbackProc) Goto_Confirm, Goto_Text);
+    
+  
+!   LabelString = XmStringCreate("Reset", XmSTRING_DEFAULT_CHARSET),
+    GotoReset_Button = XtVaCreateManagedWidget("GotoReset_Button",
+  					       xmPushButtonWidgetClass,
+  					       Goto_Form,
+--- 139,145 ----
+                  (XtCallbackProc) Goto_Confirm, Goto_Text);
+    
+  
+!   LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+    GotoReset_Button = XtVaCreateManagedWidget("GotoReset_Button",
+  					       xmPushButtonWidgetClass,
+  					       Goto_Form,
+***************
+*** 157,163 ****
+                  (XtCallbackProc) Goto_Reset, Goto_Text);
+    
+    
+!   LabelString = XmStringCreate("Close", XmSTRING_DEFAULT_CHARSET),
+    GotoClose_Button = XtVaCreateManagedWidget("GotoClose_Button",
+  					       xmPushButtonWidgetClass,
+  					       Goto_Form,
+--- 157,163 ----
+                  (XtCallbackProc) Goto_Reset, Goto_Text);
+    
+    
+!   LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+    GotoClose_Button = XtVaCreateManagedWidget("GotoClose_Button",
+  					       xmPushButtonWidgetClass,
+  					       Goto_Form,
+*** help.c~	1995-07-01 00:22:48.000000000 +0200
+--- help.c	2013-05-11 11:48:14.000000000 +0200
+***************
+*** 87,93 ****
+  						  XmNbottomPosition, 90,
+  						  NULL,0);
+    
+!   LabelString = XmStringCreate("Close", XmSTRING_DEFAULT_CHARSET),
+    DisplayHelpClose_Button = XtVaCreateManagedWidget("DisplayHelpClose_Button",
+  						    xmPushButtonWidgetClass,
+  						    DisplayHelp_Form,
+--- 87,93 ----
+  						  XmNbottomPosition, 90,
+  						  NULL,0);
+    
+!   LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+    DisplayHelpClose_Button = XtVaCreateManagedWidget("DisplayHelpClose_Button",
+  						    xmPushButtonWidgetClass,
+  						    DisplayHelp_Form,
+***************
+*** 128,135 ****
+  					 XmNtitle, "Help",
+  
+    XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate(PROGRAM_DESCRIPTION,
+! 							 XmSTRING_DEFAULT_CHARSET));
+!   XtSetArg(args[2], XmNokLabelString, XmStringCreate("Close",XmSTRING_DEFAULT_CHARSET));
+    XtSetArg(args[3], XmNtitle, "Version");
+    DisplayVersion_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "DisplayVersion_Dialog", args, 4);
+    
+--- 128,135 ----
+  					 XmNtitle, "Help",
+  
+    XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate(PROGRAM_DESCRIPTION,
+! 							 XmSTRING_OS_CHARSET));
+!   XtSetArg(args[2], XmNokLabelString, XmStringCreate("Close",XmSTRING_OS_CHARSET));
+    XtSetArg(args[3], XmNtitle, "Version");
+    DisplayVersion_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "DisplayVersion_Dialog", args, 4);
+    
+*** mail.c~	1995-07-08 00:00:03.000000000 +0200
+--- mail.c	2013-05-11 11:48:31.000000000 +0200
+***************
+*** 199,205 ****
+  				       XmNbottomPosition, 30,
+  				       NULL,0);
+    
+!   LabelString = XmStringCreate("To: ", XmSTRING_DEFAULT_CHARSET),
+    MailTo_Label = XtVaCreateManagedWidget("MailTo_Label",
+  					 xmLabelWidgetClass, 
+  					 Mail_Form2,
+--- 199,205 ----
+  				       XmNbottomPosition, 30,
+  				       NULL,0);
+    
+!   LabelString = XmStringCreate("To: ", XmSTRING_OS_CHARSET),
+    MailTo_Label = XtVaCreateManagedWidget("MailTo_Label",
+  					 xmLabelWidgetClass, 
+  					 Mail_Form2,
+***************
+*** 230,236 ****
+    
+    XmTextFieldSetString(MailTo_Text,G_CurrentEntryInRoloList->EmailAddress);
+  
+!   LabelString = XmStringCreate("CC: ", XmSTRING_DEFAULT_CHARSET),
+    MailCC_Label = XtVaCreateManagedWidget("MailCC_Label",
+  					 xmLabelWidgetClass, 
+  					 Mail_Form2,
+--- 230,236 ----
+    
+    XmTextFieldSetString(MailTo_Text,G_CurrentEntryInRoloList->EmailAddress);
+  
+!   LabelString = XmStringCreate("CC: ", XmSTRING_OS_CHARSET),
+    MailCC_Label = XtVaCreateManagedWidget("MailCC_Label",
+  					 xmLabelWidgetClass, 
+  					 Mail_Form2,
+***************
+*** 260,266 ****
+  					NULL,0);
+    
+    
+!   LabelString = XmStringCreate("BCC: ", XmSTRING_DEFAULT_CHARSET),
+    MailBCC_Label = XtVaCreateManagedWidget("MailBCC_Label",
+  					  xmLabelWidgetClass, 
+  					  Mail_Form2,
+--- 260,266 ----
+  					NULL,0);
+    
+    
+!   LabelString = XmStringCreate("BCC: ", XmSTRING_OS_CHARSET),
+    MailBCC_Label = XtVaCreateManagedWidget("MailBCC_Label",
+  					  xmLabelWidgetClass, 
+  					  Mail_Form2,
+***************
+*** 289,295 ****
+  					 XmNbottomPosition, 60,
+  					 NULL,0);
+    
+!   LabelString = XmStringCreate("Subject: ", XmSTRING_DEFAULT_CHARSET),
+    MailSubject_Label = XtVaCreateManagedWidget("MailSubject_Label",
+  					      xmLabelWidgetClass, 
+  					      Mail_Form2,
+--- 289,295 ----
+  					 XmNbottomPosition, 60,
+  					 NULL,0);
+    
+!   LabelString = XmStringCreate("Subject: ", XmSTRING_OS_CHARSET),
+    MailSubject_Label = XtVaCreateManagedWidget("MailSubject_Label",
+  					      xmLabelWidgetClass, 
+  					      Mail_Form2,
+***************
+*** 318,324 ****
+  					     XmNbottomPosition, 80,
+  					     NULL,0);
+    
+!   LabelString = XmStringCreate("Attachment: ", XmSTRING_DEFAULT_CHARSET),
+    MailAttachment_Label = XtVaCreateManagedWidget("MailAttachment_Label",
+  						 xmLabelWidgetClass, 
+  						 Mail_Form2,
+--- 318,324 ----
+  					     XmNbottomPosition, 80,
+  					     NULL,0);
+    
+!   LabelString = XmStringCreate("Attachment: ", XmSTRING_OS_CHARSET),
+    MailAttachment_Label = XtVaCreateManagedWidget("MailAttachment_Label",
+  						 xmLabelWidgetClass, 
+  						 Mail_Form2,
+***************
+*** 346,352 ****
+  						XmNcolumns, 50,
+  						NULL,0);
+  
+!   LabelString = XmStringCreate("Browse...", XmSTRING_DEFAULT_CHARSET),
+    MailAttachment_Button = XtVaCreateManagedWidget("MailAttachment_Button",
+  						  xmPushButtonWidgetClass, 
+  						  Mail_Form2,
+--- 346,352 ----
+  						XmNcolumns, 50,
+  						NULL,0);
+  
+!   LabelString = XmStringCreate("Browse...", XmSTRING_OS_CHARSET),
+    MailAttachment_Button = XtVaCreateManagedWidget("MailAttachment_Button",
+  						  xmPushButtonWidgetClass, 
+  						  Mail_Form2,
+***************
+*** 408,414 ****
+  					   XmNbottomPosition, 90,
+  					   NULL,0);
+    
+!   LabelString = XmStringCreate("Send", XmSTRING_DEFAULT_CHARSET),
+    MailConfirm_Button = XtVaCreateManagedWidget("MailConfirm_Button",
+  					       xmPushButtonWidgetClass,
+  					       Mail_Form,
+--- 408,414 ----
+  					   XmNbottomPosition, 90,
+  					   NULL,0);
+    
+!   LabelString = XmStringCreate("Send", XmSTRING_OS_CHARSET),
+    MailConfirm_Button = XtVaCreateManagedWidget("MailConfirm_Button",
+  					       xmPushButtonWidgetClass,
+  					       Mail_Form,
+***************
+*** 425,431 ****
+                  (XtCallbackProc) Mail_Confirm, Mail_Popup);
+    
+    
+!   LabelString = XmStringCreate("Reset", XmSTRING_DEFAULT_CHARSET),
+    MailReset_Button = XtVaCreateManagedWidget("MailReset_Button",
+  					     xmPushButtonWidgetClass,
+  					     Mail_Form,
+--- 425,431 ----
+                  (XtCallbackProc) Mail_Confirm, Mail_Popup);
+    
+    
+!   LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+    MailReset_Button = XtVaCreateManagedWidget("MailReset_Button",
+  					     xmPushButtonWidgetClass,
+  					     Mail_Form,
+***************
+*** 442,448 ****
+                  (XtCallbackProc) Mail_Reset, NULL);
+    
+    
+!   LabelString = XmStringCreate("Cancel", XmSTRING_DEFAULT_CHARSET),
+    MailClose_Button = XtVaCreateManagedWidget("MailClose_Button",
+  					     xmPushButtonWidgetClass,
+  					     Mail_Form,
+--- 442,448 ----
+                  (XtCallbackProc) Mail_Reset, NULL);
+    
+    
+!   LabelString = XmStringCreate("Cancel", XmSTRING_OS_CHARSET),
+    MailClose_Button = XtVaCreateManagedWidget("MailClose_Button",
+  					     xmPushButtonWidgetClass,
+  					     Mail_Form,
+***************
+*** 477,483 ****
+  {
+    char *Filename;
+  
+!   if (!XmStringGetLtoR(cbs->value,XmSTRING_DEFAULT_CHARSET,&Filename))
+      {
+        XtUnrealizeWidget(w);
+        return;      
+--- 477,483 ----
+  {
+    char *Filename;
+  
+!   if (!XmStringGetLtoR(cbs->value,XmSTRING_OS_CHARSET,&Filename))
+      {
+        XtUnrealizeWidget(w);
+        return;      
+***************
+*** 514,520 ****
+    XtVaSetValues(XtParent(W_FileDialog),
+  		XmNtitle,"Attachment File Selector",
+  		NULL,0);
+!   DirString = XmStringCreate((char *)getenv("HOME"), XmSTRING_DEFAULT_CHARSET),
+    XtVaSetValues(W_FileDialog,
+  		XmNtextColumns, 60,
+  		XmNdirectory, DirString,
+--- 514,520 ----
+    XtVaSetValues(XtParent(W_FileDialog),
+  		XmNtitle,"Attachment File Selector",
+  		NULL,0);
+!   DirString = XmStringCreate((char *)getenv("HOME"), XmSTRING_OS_CHARSET),
+    XtVaSetValues(W_FileDialog,
+  		XmNtextColumns, 60,
+  		XmNdirectory, DirString,
+*** main.c~	1995-12-23 00:47:12.000000000 +0100
+--- main.c	2013-05-11 11:48:51.000000000 +0200
+***************
+*** 259,265 ****
+  					     W_RoloForm_Frame,
+  					     NULL,0);
+  
+!   LabelString = XmStringCreate("Name: ", XmSTRING_DEFAULT_CHARSET),
+    W_Name_Label= XtVaCreateManagedWidget("W_Name_Label",
+  					xmLabelWidgetClass,
+  					W_RoloForm_Form,
+--- 259,265 ----
+  					     W_RoloForm_Frame,
+  					     NULL,0);
+  
+!   LabelString = XmStringCreate("Name: ", XmSTRING_OS_CHARSET),
+    W_Name_Label= XtVaCreateManagedWidget("W_Name_Label",
+  					xmLabelWidgetClass,
+  					W_RoloForm_Form,
+***************
+*** 285,291 ****
+    XtAddEventHandler(W_Name_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "name");
+  
+!   LabelString = XmStringCreate("Work Phone: ", XmSTRING_DEFAULT_CHARSET),
+    W_WorkPhone_Label= XtVaCreateManagedWidget("W_WorkPhone_Label",
+  					     xmLabelWidgetClass,
+  					     W_RoloForm_Form,
+--- 285,291 ----
+    XtAddEventHandler(W_Name_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "name");
+  
+!   LabelString = XmStringCreate("Work Phone: ", XmSTRING_OS_CHARSET),
+    W_WorkPhone_Label= XtVaCreateManagedWidget("W_WorkPhone_Label",
+  					     xmLabelWidgetClass,
+  					     W_RoloForm_Form,
+***************
+*** 313,319 ****
+    XtAddEventHandler(W_WorkPhone_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "wphone");
+  
+!   LabelString = XmStringCreate("Fax Number: ", XmSTRING_DEFAULT_CHARSET),
+    W_FaxNumber_Label= XtVaCreateManagedWidget("W_FaxNumber_Label",
+  					     xmLabelWidgetClass,
+  					     W_RoloForm_Form,
+--- 313,319 ----
+    XtAddEventHandler(W_WorkPhone_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "wphone");
+  
+!   LabelString = XmStringCreate("Fax Number: ", XmSTRING_OS_CHARSET),
+    W_FaxNumber_Label= XtVaCreateManagedWidget("W_FaxNumber_Label",
+  					     xmLabelWidgetClass,
+  					     W_RoloForm_Form,
+***************
+*** 341,347 ****
+    XtAddEventHandler(W_FaxNumber_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "fax");
+  
+!   LabelString = XmStringCreate("Home Phone: ", XmSTRING_DEFAULT_CHARSET),
+    W_HomePhone_Label= XtVaCreateManagedWidget("W_HomePhone_Label",
+  					     xmLabelWidgetClass,
+  					     W_RoloForm_Form,
+--- 341,347 ----
+    XtAddEventHandler(W_FaxNumber_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "fax");
+  
+!   LabelString = XmStringCreate("Home Phone: ", XmSTRING_OS_CHARSET),
+    W_HomePhone_Label= XtVaCreateManagedWidget("W_HomePhone_Label",
+  					     xmLabelWidgetClass,
+  					     W_RoloForm_Form,
+***************
+*** 369,375 ****
+    XtAddEventHandler(W_HomePhone_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "hphone");
+  
+!   LabelString = XmStringCreate("Company: ", XmSTRING_DEFAULT_CHARSET),
+    W_Company_Label= XtVaCreateManagedWidget("W_Company_Label",
+  					   xmLabelWidgetClass,
+  					   W_RoloForm_Form,
+--- 369,375 ----
+    XtAddEventHandler(W_HomePhone_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "hphone");
+  
+!   LabelString = XmStringCreate("Company: ", XmSTRING_OS_CHARSET),
+    W_Company_Label= XtVaCreateManagedWidget("W_Company_Label",
+  					   xmLabelWidgetClass,
+  					   W_RoloForm_Form,
+***************
+*** 397,403 ****
+    XtAddEventHandler(W_Company_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "company");
+    
+!   LabelString = XmStringCreate("Email Address: ", XmSTRING_DEFAULT_CHARSET),
+    W_EmailAddress_Label= XtVaCreateManagedWidget("W_EmailAddress_Label",
+  					     xmLabelWidgetClass,
+  					     W_RoloForm_Form,
+--- 397,403 ----
+    XtAddEventHandler(W_Company_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "company");
+    
+!   LabelString = XmStringCreate("Email Address: ", XmSTRING_OS_CHARSET),
+    W_EmailAddress_Label= XtVaCreateManagedWidget("W_EmailAddress_Label",
+  					     xmLabelWidgetClass,
+  					     W_RoloForm_Form,
+***************
+*** 425,431 ****
+    XtAddEventHandler(W_EmailAddress_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "email");
+  
+!   LabelString = XmStringCreate("Work Address: ", XmSTRING_DEFAULT_CHARSET),
+    W_WorkAddress_Label= XtVaCreateManagedWidget("W_WorkAddress_Label",
+  					       xmLabelWidgetClass,
+  					       W_RoloForm_Form,
+--- 425,431 ----
+    XtAddEventHandler(W_EmailAddress_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "email");
+  
+!   LabelString = XmStringCreate("Work Address: ", XmSTRING_OS_CHARSET),
+    W_WorkAddress_Label= XtVaCreateManagedWidget("W_WorkAddress_Label",
+  					       xmLabelWidgetClass,
+  					       W_RoloForm_Form,
+***************
+*** 453,459 ****
+    XtAddEventHandler(W_WorkAddress_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "waddress");
+    
+!   LabelString = XmStringCreate("Home Address: ", XmSTRING_DEFAULT_CHARSET),
+    W_HomeAddress_Label= XtVaCreateManagedWidget("W_HomeAddress_Label",
+  					       xmLabelWidgetClass,
+  					       W_RoloForm_Form,
+--- 453,459 ----
+    XtAddEventHandler(W_WorkAddress_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "waddress");
+    
+!   LabelString = XmStringCreate("Home Address: ", XmSTRING_OS_CHARSET),
+    W_HomeAddress_Label= XtVaCreateManagedWidget("W_HomeAddress_Label",
+  					       xmLabelWidgetClass,
+  					       W_RoloForm_Form,
+***************
+*** 482,488 ****
+  		    (XtPointer) "haddress");
+  
+    
+!   LabelString = XmStringCreate("Date Updated: ", XmSTRING_DEFAULT_CHARSET),
+    W_DateUpdated_Label= XtVaCreateManagedWidget("W_DateUpdated_Label",
+  					       xmLabelWidgetClass,
+  					       W_RoloForm_Form,
+--- 482,488 ----
+  		    (XtPointer) "haddress");
+  
+    
+!   LabelString = XmStringCreate("Date Updated: ", XmSTRING_OS_CHARSET),
+    W_DateUpdated_Label= XtVaCreateManagedWidget("W_DateUpdated_Label",
+  					       xmLabelWidgetClass,
+  					       W_RoloForm_Form,
+***************
+*** 511,517 ****
+    XtAddEventHandler(W_DateUpdated_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "date");
+    
+!   LabelString = XmStringCreate("Remarks: ", XmSTRING_DEFAULT_CHARSET),
+    W_Remarks_Label= XtVaCreateManagedWidget("W_Remarks_Label",
+  					   xmLabelWidgetClass,
+  					   W_RoloForm_Form,
+--- 511,517 ----
+    XtAddEventHandler(W_DateUpdated_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "date");
+    
+!   LabelString = XmStringCreate("Remarks: ", XmSTRING_OS_CHARSET),
+    W_Remarks_Label= XtVaCreateManagedWidget("W_Remarks_Label",
+  					   xmLabelWidgetClass,
+  					   W_RoloForm_Form,
+***************
+*** 556,562 ****
+  						 NULL, 0);
+    
+    
+!   LabelString = XmStringCreate("Current Entry:  ", XmSTRING_DEFAULT_CHARSET),
+    W_CurrentNum_Label= XtVaCreateManagedWidget("W_CurrentNum_Label",
+  					      xmLabelWidgetClass,
+  					      W_RoloForm_Form,
+--- 556,562 ----
+  						 NULL, 0);
+    
+    
+!   LabelString = XmStringCreate("Current Entry:  ", XmSTRING_OS_CHARSET),
+    W_CurrentNum_Label= XtVaCreateManagedWidget("W_CurrentNum_Label",
+  					      xmLabelWidgetClass,
+  					      W_RoloForm_Form,
+***************
+*** 584,590 ****
+  		    (XtPointer) "current");
+    
+    
+!   LabelString = XmStringCreate("Total Number of Entries:  ", XmSTRING_DEFAULT_CHARSET),
+    W_TotalNum_Label= XtVaCreateManagedWidget("W_TotalNum_Label",
+  					    xmLabelWidgetClass,
+  					    W_RoloForm_Form,
+--- 584,590 ----
+  		    (XtPointer) "current");
+    
+    
+!   LabelString = XmStringCreate("Total Number of Entries:  ", XmSTRING_OS_CHARSET),
+    W_TotalNum_Label= XtVaCreateManagedWidget("W_TotalNum_Label",
+  					    xmLabelWidgetClass,
+  					    W_RoloForm_Form,
+***************
+*** 624,630 ****
+  						 XmNorientation, XmHORIZONTAL,
+  						 NULL, 0);
+    
+!   LabelString = XmStringCreate("Help: ", XmSTRING_DEFAULT_CHARSET),
+    W_Help_Label= XtVaCreateManagedWidget("W_Help_Label",
+  					xmLabelWidgetClass,
+  					W_RoloForm_Form,
+--- 624,630 ----
+  						 XmNorientation, XmHORIZONTAL,
+  						 NULL, 0);
+    
+!   LabelString = XmStringCreate("Help: ", XmSTRING_OS_CHARSET),
+    W_Help_Label= XtVaCreateManagedWidget("W_Help_Label",
+  					xmLabelWidgetClass,
+  					W_RoloForm_Form,
+***************
+*** 681,687 ****
+  					   XmNentryAlignment, XmALIGNMENT_CENTER,
+  					   NULL,0);
+  
+!   LabelString = XmStringCreate("Previous", XmSTRING_DEFAULT_CHARSET),
+    W_Prev_Button= XtVaCreateManagedWidget("W_Prev_Button",
+  					 xmArrowButtonWidgetClass,
+  					 W_ButtonBar_RC,
+--- 681,687 ----
+  					   XmNentryAlignment, XmALIGNMENT_CENTER,
+  					   NULL,0);
+  
+!   LabelString = XmStringCreate("Previous", XmSTRING_OS_CHARSET),
+    W_Prev_Button= XtVaCreateManagedWidget("W_Prev_Button",
+  					 xmArrowButtonWidgetClass,
+  					 W_ButtonBar_RC,
+***************
+*** 695,701 ****
+  		    (XtPointer) "prev");
+  
+  
+!   LabelString = XmStringCreate("Next", XmSTRING_DEFAULT_CHARSET),
+    W_Next_Button= XtVaCreateManagedWidget("W_Next_Button",
+  					 xmArrowButtonWidgetClass,
+  					 W_ButtonBar_RC,
+--- 695,701 ----
+  		    (XtPointer) "prev");
+  
+  
+!   LabelString = XmStringCreate("Next", XmSTRING_OS_CHARSET),
+    W_Next_Button= XtVaCreateManagedWidget("W_Next_Button",
+  					 xmArrowButtonWidgetClass,
+  					 W_ButtonBar_RC,
+***************
+*** 708,714 ****
+    XtAddEventHandler(W_Next_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "next");
+  
+!   LabelString = XmStringCreate("Search", XmSTRING_DEFAULT_CHARSET),
+    W_Search_Button= XtVaCreateManagedWidget("W_Search_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+--- 708,714 ----
+    XtAddEventHandler(W_Next_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "next");
+  
+!   LabelString = XmStringCreate("Search", XmSTRING_OS_CHARSET),
+    W_Search_Button= XtVaCreateManagedWidget("W_Search_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+***************
+*** 720,726 ****
+    XtAddEventHandler(W_Search_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "search");
+  
+!   LabelString = XmStringCreate("Goto", XmSTRING_DEFAULT_CHARSET),
+    W_Goto_Button= XtVaCreateManagedWidget("W_Goto_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+--- 720,726 ----
+    XtAddEventHandler(W_Search_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "search");
+  
+!   LabelString = XmStringCreate("Goto", XmSTRING_OS_CHARSET),
+    W_Goto_Button= XtVaCreateManagedWidget("W_Goto_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+***************
+*** 732,738 ****
+    XtAddEventHandler(W_Goto_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "goto");
+  
+!   LabelString = XmStringCreate("Add", XmSTRING_DEFAULT_CHARSET),
+    W_Add_Button= XtVaCreateManagedWidget("W_Add_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+--- 732,738 ----
+    XtAddEventHandler(W_Goto_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "goto");
+  
+!   LabelString = XmStringCreate("Add", XmSTRING_OS_CHARSET),
+    W_Add_Button= XtVaCreateManagedWidget("W_Add_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+***************
+*** 744,750 ****
+    XtAddEventHandler(W_Add_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "add");
+  
+!   LabelString = XmStringCreate("Delete", XmSTRING_DEFAULT_CHARSET),
+    W_Delete_Button= XtVaCreateManagedWidget("W_Delete_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+--- 744,750 ----
+    XtAddEventHandler(W_Add_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "add");
+  
+!   LabelString = XmStringCreate("Delete", XmSTRING_OS_CHARSET),
+    W_Delete_Button= XtVaCreateManagedWidget("W_Delete_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+***************
+*** 756,762 ****
+    XtAddEventHandler(W_Delete_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "delete");
+  
+!   LabelString = XmStringCreate("Update", XmSTRING_DEFAULT_CHARSET),
+    W_Update_Button= XtVaCreateManagedWidget("W_Update_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+--- 756,762 ----
+    XtAddEventHandler(W_Delete_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "delete");
+  
+!   LabelString = XmStringCreate("Update", XmSTRING_OS_CHARSET),
+    W_Update_Button= XtVaCreateManagedWidget("W_Update_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+***************
+*** 768,774 ****
+    XtAddEventHandler(W_Update_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "update");
+  
+!   LabelString = XmStringCreate("Clear", XmSTRING_DEFAULT_CHARSET),
+    W_Clear_Button= XtVaCreateManagedWidget("W_Clear_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+--- 768,774 ----
+    XtAddEventHandler(W_Update_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
+  		    (XtPointer) "update");
+  
+!   LabelString = XmStringCreate("Clear", XmSTRING_OS_CHARSET),
+    W_Clear_Button= XtVaCreateManagedWidget("W_Clear_Button",
+  					 xmPushButtonWidgetClass,
+  					 W_ButtonBar_RC,
+***************
+*** 781,787 ****
+  		    (XtPointer) "clear");
+    
+  /*
+!   LabelString = XmStringCreate("Duplicate", XmSTRING_DEFAULT_CHARSET),
+    W_Duplicate_Button= XtVaCreateManagedWidget("W_Duplicate_Button",
+  					      xmPushButtonWidgetClass,
+  					      W_ButtonBar_RC,
+--- 781,787 ----
+  		    (XtPointer) "clear");
+    
+  /*
+!   LabelString = XmStringCreate("Duplicate", XmSTRING_OS_CHARSET),
+    W_Duplicate_Button= XtVaCreateManagedWidget("W_Duplicate_Button",
+  					      xmPushButtonWidgetClass,
+  					      W_ButtonBar_RC,
+***************
+*** 1069,1075 ****
+    if (G_NameListVisible == True)
+      {
+  /*       fprintf(stderr,"ADD TO NAMELIST %d\n",G_CurrentNumInRoloList); */
+!       ListString = XmStringCreate(Entry.Name, XmSTRING_DEFAULT_CHARSET);
+        XmListAddItem(NameList_List,ListString,G_CurrentNumInRoloList);
+        XmListSelectPos(NameList_List,G_CurrentNumInRoloList,True);
+        XmStringFree(ListString);
+--- 1069,1075 ----
+    if (G_NameListVisible == True)
+      {
+  /*       fprintf(stderr,"ADD TO NAMELIST %d\n",G_CurrentNumInRoloList); */
+!       ListString = XmStringCreate(Entry.Name, XmSTRING_OS_CHARSET);
+        XmListAddItem(NameList_List,ListString,G_CurrentNumInRoloList);
+        XmListSelectPos(NameList_List,G_CurrentNumInRoloList,True);
+        XmStringFree(ListString);
+***************
+*** 1125,1131 ****
+      {
+  /*       fprintf(stderr,"UPDATE TO NAMELIST  %d\n",G_CurrentNumInRoloList); */
+        XmListDeletePos(NameList_List,G_CurrentNumInRoloList); 
+!       ListString = XmStringCreate(Entry.Name, XmSTRING_DEFAULT_CHARSET);
+        XmListAddItem(NameList_List,ListString,G_CurrentNumInRoloList);
+        XmStringFree(ListString);
+      }
+--- 1125,1131 ----
+      {
+  /*       fprintf(stderr,"UPDATE TO NAMELIST  %d\n",G_CurrentNumInRoloList); */
+        XmListDeletePos(NameList_List,G_CurrentNumInRoloList); 
+!       ListString = XmStringCreate(Entry.Name, XmSTRING_OS_CHARSET);
+        XmListAddItem(NameList_List,ListString,G_CurrentNumInRoloList);
+        XmStringFree(ListString);
+      }
+***************
+*** 1204,1210 ****
+        if (strcmp(Help_List[lcv].Key,Key) == 0)
+  	{
+  	  sprintf(LabelBuffer,"Help: %s",Help_List[lcv].Value);
+! 	  LabelString = XmStringCreate(LabelBuffer, XmSTRING_DEFAULT_CHARSET),
+  	  XtVaSetValues(W_Help_Label,
+  			XmNlabelString,LabelString,
+  			NULL,0);
+--- 1204,1210 ----
+        if (strcmp(Help_List[lcv].Key,Key) == 0)
+  	{
+  	  sprintf(LabelBuffer,"Help: %s",Help_List[lcv].Value);
+! 	  LabelString = XmStringCreate(LabelBuffer, XmSTRING_OS_CHARSET),
+  	  XtVaSetValues(W_Help_Label,
+  			XmNlabelString,LabelString,
+  			NULL,0);
+*** namelist.c~	1995-07-07 22:55:34.000000000 +0200
+--- namelist.c	2013-05-11 11:49:07.000000000 +0200
+***************
+*** 34,40 ****
+    Temp = G_RoloList;
+    while (Temp != NULL)
+      {
+!       ListString = XmStringCreate(Temp->Name, XmSTRING_DEFAULT_CHARSET);
+        XmListAddItem(ListWidget,ListString,0);
+        XmStringFree(ListString);
+        Temp = Temp->Next;
+--- 34,40 ----
+    Temp = G_RoloList;
+    while (Temp != NULL)
+      {
+!       ListString = XmStringCreate(Temp->Name, XmSTRING_OS_CHARSET);
+        XmListAddItem(ListWidget,ListString,0);
+        XmStringFree(ListString);
+        Temp = Temp->Next;
+***************
+*** 78,84 ****
+  					NameList_Frame,
+  					NULL,0);
+    
+!   LabelString = XmStringCreate("Name", XmSTRING_DEFAULT_CHARSET);
+    NameList_Label = XtVaCreateManagedWidget("NameList_Label",
+  					   xmLabelWidgetClass, 
+  					   NameList_Form,
+--- 78,84 ----
+  					NameList_Frame,
+  					NULL,0);
+    
+!   LabelString = XmStringCreate("Name", XmSTRING_OS_CHARSET);
+    NameList_Label = XtVaCreateManagedWidget("NameList_Label",
+  					   xmLabelWidgetClass, 
+  					   NameList_Form,
+***************
+*** 135,141 ****
+  					       NULL,0);
+    
+    
+!   LabelString = XmStringCreate("Close", XmSTRING_DEFAULT_CHARSET),
+    NameListClose_Button = XtVaCreateManagedWidget("NameListClose_Button",
+  					       xmPushButtonWidgetClass,
+  					       NameList_Form,
+--- 135,141 ----
+  					       NULL,0);
+    
+    
+!   LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+    NameListClose_Button = XtVaCreateManagedWidget("NameListClose_Button",
+  					       xmPushButtonWidgetClass,
+  					       NameList_Form,
+*** preferences.c~	1995-07-21 02:13:19.000000000 +0200
+--- preferences.c	2013-05-11 11:49:28.000000000 +0200
+***************
+*** 92,98 ****
+  				       Pref_Frame,
+  				       NULL,0);
+    
+!   LabelString = XmStringCreate("Range Start: ", XmSTRING_DEFAULT_CHARSET),
+    PrefRangeStart_Label = XtVaCreateManagedWidget("PrefRangeStart_Label",
+  						  xmLabelWidgetClass, 
+  						  Pref_Form,
+--- 92,98 ----
+  				       Pref_Frame,
+  				       NULL,0);
+    
+!   LabelString = XmStringCreate("Range Start: ", XmSTRING_OS_CHARSET),
+    PrefRangeStart_Label = XtVaCreateManagedWidget("PrefRangeStart_Label",
+  						  xmLabelWidgetClass, 
+  						  Pref_Form,
+***************
+*** 118,124 ****
+  						 XmNtopOffset, 10,
+  						 NULL,0);
+  
+!   LabelString = XmStringCreate("Range End: ", XmSTRING_DEFAULT_CHARSET),
+    PrefRangeEnd_Label = XtVaCreateManagedWidget("PrefRangeEnd_Label",
+  						xmLabelWidgetClass, 
+  						Pref_Form,
+--- 118,124 ----
+  						 XmNtopOffset, 10,
+  						 NULL,0);
+  
+!   LabelString = XmStringCreate("Range End: ", XmSTRING_OS_CHARSET),
+    PrefRangeEnd_Label = XtVaCreateManagedWidget("PrefRangeEnd_Label",
+  						xmLabelWidgetClass, 
+  						Pref_Form,
+***************
+*** 161,167 ****
+  					 XmNradioBehavior, True,
+  					 NULL,0);
+    
+!   LabelString = XmStringCreate("Postscript Output", XmSTRING_DEFAULT_CHARSET),
+    PrefTypePS_Toggle = XtVaCreateManagedWidget("PrefTypePS_Toggle",
+  					       xmToggleButtonWidgetClass, 
+  					       PrefType_RC,
+--- 161,167 ----
+  					 XmNradioBehavior, True,
+  					 NULL,0);
+    
+!   LabelString = XmStringCreate("Postscript Output", XmSTRING_OS_CHARSET),
+    PrefTypePS_Toggle = XtVaCreateManagedWidget("PrefTypePS_Toggle",
+  					       xmToggleButtonWidgetClass, 
+  					       PrefType_RC,
+***************
+*** 170,176 ****
+    XmStringFree(LabelString);
+    XmToggleButtonSetState(PrefTypePS_Toggle,True,True);
+    
+!   LabelString = XmStringCreate("Text Output", XmSTRING_DEFAULT_CHARSET),
+    PrefTypeText_Toggle = XtVaCreateManagedWidget("PrefTypeText_Toggle",
+  						 xmToggleButtonWidgetClass, 
+  						 PrefType_RC,
+--- 170,176 ----
+    XmStringFree(LabelString);
+    XmToggleButtonSetState(PrefTypePS_Toggle,True,True);
+    
+!   LabelString = XmStringCreate("Text Output", XmSTRING_OS_CHARSET),
+    PrefTypeText_Toggle = XtVaCreateManagedWidget("PrefTypeText_Toggle",
+  						 xmToggleButtonWidgetClass, 
+  						 PrefType_RC,
+***************
+*** 194,200 ****
+  				     XmNradioBehavior, True,
+  				     NULL,0);
+    
+!   LabelString = XmStringCreate("Output to a Prefer", XmSTRING_DEFAULT_CHARSET),
+    PrefLpr_Toggle = XtVaCreateManagedWidget("PrefLpr_Toggle",
+  					    xmToggleButtonWidgetClass, 
+  					    Pref_RC,
+--- 194,200 ----
+  				     XmNradioBehavior, True,
+  				     NULL,0);
+    
+!   LabelString = XmStringCreate("Output to a Prefer", XmSTRING_OS_CHARSET),
+    PrefLpr_Toggle = XtVaCreateManagedWidget("PrefLpr_Toggle",
+  					    xmToggleButtonWidgetClass, 
+  					    Pref_RC,
+***************
+*** 206,212 ****
+    XmToggleButtonSetState(PrefLpr_Toggle,True,True);
+  */
+  
+!   LabelString = XmStringCreate("Output to a File", XmSTRING_DEFAULT_CHARSET),
+    PrefFile_Toggle = XtVaCreateManagedWidget("PrefFile_Toggle",
+  					     xmToggleButtonWidgetClass, 
+  					     Pref_RC,
+--- 206,212 ----
+    XmToggleButtonSetState(PrefLpr_Toggle,True,True);
+  */
+  
+!   LabelString = XmStringCreate("Output to a File", XmSTRING_OS_CHARSET),
+    PrefFile_Toggle = XtVaCreateManagedWidget("PrefFile_Toggle",
+  					     xmToggleButtonWidgetClass, 
+  					     Pref_RC,
+***************
+*** 216,222 ****
+  /*  XtAddCallback(PrefFile_Toggle, XmNarmCallback, 
+                  (XtCallbackProc) File_Toggle_Callback, Pref_Popup);
+  */
+!   LabelString = XmStringCreate("Pref Command: ", XmSTRING_DEFAULT_CHARSET),
+    PrefLpr_Label = XtVaCreateManagedWidget("PrefLpr_Label",
+  					   xmLabelWidgetClass, 
+  					   Pref_Form,
+--- 216,222 ----
+  /*  XtAddCallback(PrefFile_Toggle, XmNarmCallback, 
+                  (XtCallbackProc) File_Toggle_Callback, Pref_Popup);
+  */
+!   LabelString = XmStringCreate("Pref Command: ", XmSTRING_OS_CHARSET),
+    PrefLpr_Label = XtVaCreateManagedWidget("PrefLpr_Label",
+  					   xmLabelWidgetClass, 
+  					   Pref_Form,
+***************
+*** 247,253 ****
+  /*   XmTextFieldSetString(PrefLpr_Text,DEFAULT_Pref_COMMAND); */
+    
+  
+!   LabelString = XmStringCreate("Filename: ", XmSTRING_DEFAULT_CHARSET),
+    PrefFile_Label = XtVaCreateManagedWidget("PrefFile_Label",
+  					    xmLabelWidgetClass, 
+  					    Pref_Form,
+--- 247,253 ----
+  /*   XmTextFieldSetString(PrefLpr_Text,DEFAULT_Pref_COMMAND); */
+    
+  
+!   LabelString = XmStringCreate("Filename: ", XmSTRING_OS_CHARSET),
+    PrefFile_Label = XtVaCreateManagedWidget("PrefFile_Label",
+  					    xmLabelWidgetClass, 
+  					    Pref_Form,
+***************
+*** 290,296 ****
+  					    NULL,0);
+    
+  
+!   LabelString = XmStringCreate("Pref", XmSTRING_DEFAULT_CHARSET),
+    PrefConfirm_Button = XtVaCreateManagedWidget("PrefConfirm_Button",
+  						xmPushButtonWidgetClass,
+  						Pref_Form,
+--- 290,296 ----
+  					    NULL,0);
+    
+  
+!   LabelString = XmStringCreate("Pref", XmSTRING_OS_CHARSET),
+    PrefConfirm_Button = XtVaCreateManagedWidget("PrefConfirm_Button",
+  						xmPushButtonWidgetClass,
+  						Pref_Form,
+***************
+*** 308,314 ****
+                  (XtCallbackProc) Pref_Confirm, Pref_Popup);
+    
+    
+!   LabelString = XmStringCreate("Reset", XmSTRING_DEFAULT_CHARSET),
+    PrefReset_Button = XtVaCreateManagedWidget("PrefReset_Button",
+  					      xmPushButtonWidgetClass,
+  					      Pref_Form,
+--- 308,314 ----
+                  (XtCallbackProc) Pref_Confirm, Pref_Popup);
+    
+    
+!   LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+    PrefReset_Button = XtVaCreateManagedWidget("PrefReset_Button",
+  					      xmPushButtonWidgetClass,
+  					      Pref_Form,
+***************
+*** 326,332 ****
+                  (XtCallbackProc) Pref_Reset, NULL);
+    
+    
+!   LabelString = XmStringCreate("Cancel", XmSTRING_DEFAULT_CHARSET),
+    PrefClose_Button = XtVaCreateManagedWidget("PrefClose_Button",
+  					      xmPushButtonWidgetClass,
+  					      Pref_Form,
+--- 326,332 ----
+                  (XtCallbackProc) Pref_Reset, NULL);
+    
+    
+!   LabelString = XmStringCreate("Cancel", XmSTRING_OS_CHARSET),
+    PrefClose_Button = XtVaCreateManagedWidget("PrefClose_Button",
+  					      xmPushButtonWidgetClass,
+  					      Pref_Form,
+*** print.c~	1996-05-11 22:33:01.000000000 +0200
+--- print.c	2013-05-11 11:49:49.000000000 +0200
+***************
+*** 378,384 ****
+  				       Print_Frame,
+  				       NULL,0);
+    
+!   LabelString = XmStringCreate("Range Start: ", XmSTRING_DEFAULT_CHARSET),
+    PrintRangeStart_Label = XtVaCreateManagedWidget("PrintRangeStart_Label",
+  						  xmLabelWidgetClass, 
+  						  Print_Form,
+--- 378,384 ----
+  				       Print_Frame,
+  				       NULL,0);
+    
+!   LabelString = XmStringCreate("Range Start: ", XmSTRING_OS_CHARSET),
+    PrintRangeStart_Label = XtVaCreateManagedWidget("PrintRangeStart_Label",
+  						  xmLabelWidgetClass, 
+  						  Print_Form,
+***************
+*** 404,410 ****
+  						 XmNtopOffset, 10,
+  						 NULL,0);
+  
+!   LabelString = XmStringCreate("Range End: ", XmSTRING_DEFAULT_CHARSET),
+    PrintRangeEnd_Label = XtVaCreateManagedWidget("PrintRangeEnd_Label",
+  						xmLabelWidgetClass, 
+  						Print_Form,
+--- 404,410 ----
+  						 XmNtopOffset, 10,
+  						 NULL,0);
+  
+!   LabelString = XmStringCreate("Range End: ", XmSTRING_OS_CHARSET),
+    PrintRangeEnd_Label = XtVaCreateManagedWidget("PrintRangeEnd_Label",
+  						xmLabelWidgetClass, 
+  						Print_Form,
+***************
+*** 453,459 ****
+  					 XmNradioBehavior, True,
+  					 NULL,0);
+    
+!   LabelString = XmStringCreate("Postscript Output", XmSTRING_DEFAULT_CHARSET),
+    PrintTypePS_Toggle = XtVaCreateManagedWidget("PrintTypePS_Toggle",
+  					       xmToggleButtonWidgetClass, 
+  					       PrintType_RC,
+--- 453,459 ----
+  					 XmNradioBehavior, True,
+  					 NULL,0);
+    
+!   LabelString = XmStringCreate("Postscript Output", XmSTRING_OS_CHARSET),
+    PrintTypePS_Toggle = XtVaCreateManagedWidget("PrintTypePS_Toggle",
+  					       xmToggleButtonWidgetClass, 
+  					       PrintType_RC,
+***************
+*** 462,468 ****
+    XmStringFree(LabelString);
+    XmToggleButtonSetState(PrintTypePS_Toggle,True,True);
+    
+!   LabelString = XmStringCreate("Text Output", XmSTRING_DEFAULT_CHARSET),
+    PrintTypeText_Toggle = XtVaCreateManagedWidget("PrintTypeText_Toggle",
+  						 xmToggleButtonWidgetClass, 
+  						 PrintType_RC,
+--- 462,468 ----
+    XmStringFree(LabelString);
+    XmToggleButtonSetState(PrintTypePS_Toggle,True,True);
+    
+!   LabelString = XmStringCreate("Text Output", XmSTRING_OS_CHARSET),
+    PrintTypeText_Toggle = XtVaCreateManagedWidget("PrintTypeText_Toggle",
+  						 xmToggleButtonWidgetClass, 
+  						 PrintType_RC,
+***************
+*** 486,492 ****
+  				     XmNradioBehavior, True,
+  				     NULL,0);
+    
+!   LabelString = XmStringCreate("Output to a Printer", XmSTRING_DEFAULT_CHARSET),
+    PrintLpr_Toggle = XtVaCreateManagedWidget("PrintLpr_Toggle",
+  					    xmToggleButtonWidgetClass, 
+  					    Print_RC,
+--- 486,492 ----
+  				     XmNradioBehavior, True,
+  				     NULL,0);
+    
+!   LabelString = XmStringCreate("Output to a Printer", XmSTRING_OS_CHARSET),
+    PrintLpr_Toggle = XtVaCreateManagedWidget("PrintLpr_Toggle",
+  					    xmToggleButtonWidgetClass, 
+  					    Print_RC,
+***************
+*** 497,503 ****
+                  (XtCallbackProc) Lpr_Toggle_Callback, Print_Popup);
+    XmToggleButtonSetState(PrintLpr_Toggle,True,True);
+  
+!   LabelString = XmStringCreate("Output to a File", XmSTRING_DEFAULT_CHARSET),
+    PrintFile_Toggle = XtVaCreateManagedWidget("PrintFile_Toggle",
+  					     xmToggleButtonWidgetClass, 
+  					     Print_RC,
+--- 497,503 ----
+                  (XtCallbackProc) Lpr_Toggle_Callback, Print_Popup);
+    XmToggleButtonSetState(PrintLpr_Toggle,True,True);
+  
+!   LabelString = XmStringCreate("Output to a File", XmSTRING_OS_CHARSET),
+    PrintFile_Toggle = XtVaCreateManagedWidget("PrintFile_Toggle",
+  					     xmToggleButtonWidgetClass, 
+  					     Print_RC,
+***************
+*** 507,513 ****
+    XtAddCallback(PrintFile_Toggle, XmNarmCallback, 
+                  (XtCallbackProc) File_Toggle_Callback, Print_Popup);
+  
+!   LabelString = XmStringCreate("Print Command: ", XmSTRING_DEFAULT_CHARSET),
+    PrintLpr_Label = XtVaCreateManagedWidget("PrintLpr_Label",
+  					   xmLabelWidgetClass, 
+  					   Print_Form,
+--- 507,513 ----
+    XtAddCallback(PrintFile_Toggle, XmNarmCallback, 
+                  (XtCallbackProc) File_Toggle_Callback, Print_Popup);
+  
+!   LabelString = XmStringCreate("Print Command: ", XmSTRING_OS_CHARSET),
+    PrintLpr_Label = XtVaCreateManagedWidget("PrintLpr_Label",
+  					   xmLabelWidgetClass, 
+  					   Print_Form,
+***************
+*** 538,544 ****
+    XmTextFieldSetString(PrintLpr_Text,DEFAULT_PRINT_COMMAND);
+    
+  
+!   LabelString = XmStringCreate("Filename: ", XmSTRING_DEFAULT_CHARSET),
+    PrintFile_Label = XtVaCreateManagedWidget("PrintFile_Label",
+  					    xmLabelWidgetClass, 
+  					    Print_Form,
+--- 538,544 ----
+    XmTextFieldSetString(PrintLpr_Text,DEFAULT_PRINT_COMMAND);
+    
+  
+!   LabelString = XmStringCreate("Filename: ", XmSTRING_OS_CHARSET),
+    PrintFile_Label = XtVaCreateManagedWidget("PrintFile_Label",
+  					    xmLabelWidgetClass, 
+  					    Print_Form,
+***************
+*** 581,587 ****
+  					    NULL,0);
+    
+  
+!   LabelString = XmStringCreate("Print", XmSTRING_DEFAULT_CHARSET),
+    PrintConfirm_Button = XtVaCreateManagedWidget("PrintConfirm_Button",
+  						xmPushButtonWidgetClass,
+  						Print_Form,
+--- 581,587 ----
+  					    NULL,0);
+    
+  
+!   LabelString = XmStringCreate("Print", XmSTRING_OS_CHARSET),
+    PrintConfirm_Button = XtVaCreateManagedWidget("PrintConfirm_Button",
+  						xmPushButtonWidgetClass,
+  						Print_Form,
+***************
+*** 599,605 ****
+                  (XtCallbackProc) Print_Confirm, Print_Popup);
+    
+    
+!   LabelString = XmStringCreate("Reset", XmSTRING_DEFAULT_CHARSET),
+    PrintReset_Button = XtVaCreateManagedWidget("PrintReset_Button",
+  					      xmPushButtonWidgetClass,
+  					      Print_Form,
+--- 599,605 ----
+                  (XtCallbackProc) Print_Confirm, Print_Popup);
+    
+    
+!   LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+    PrintReset_Button = XtVaCreateManagedWidget("PrintReset_Button",
+  					      xmPushButtonWidgetClass,
+  					      Print_Form,
+***************
+*** 617,623 ****
+                  (XtCallbackProc) Print_Reset, NULL);
+    
+    
+!   LabelString = XmStringCreate("Cancel", XmSTRING_DEFAULT_CHARSET),
+    PrintClose_Button = XtVaCreateManagedWidget("PrintClose_Button",
+  					      xmPushButtonWidgetClass,
+  					      Print_Form,
+--- 617,623 ----
+                  (XtCallbackProc) Print_Reset, NULL);
+    
+    
+!   LabelString = XmStringCreate("Cancel", XmSTRING_OS_CHARSET),
+    PrintClose_Button = XtVaCreateManagedWidget("PrintClose_Button",
+  					      xmPushButtonWidgetClass,
+  					      Print_Form,
+*** quit.c~	1995-12-23 00:30:36.000000000 +0100
+--- quit.c	2013-05-11 11:50:07.000000000 +0200
+***************
+*** 28,36 ****
+      }
+    XtSetArg(args[0], XmNautoUnmanage, False);
+    XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate("Exit program w/o saving?",
+!                                                          XmSTRING_DEFAULT_CHARSET));
+!   XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmSTRING_DEFAULT_CHARSET));
+!   XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmSTRING_DEFAULT_CHARSET));
+    XtSetArg(args[4], XmNtitle, "Exit Program");
+    ExitProgram_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "ExitProgram_Dialog",
+  							args, 5);
+--- 28,36 ----
+      }
+    XtSetArg(args[0], XmNautoUnmanage, False);
+    XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate("Exit program w/o saving?",
+!                                                          XmSTRING_OS_CHARSET));
+!   XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmSTRING_OS_CHARSET));
+!   XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmSTRING_OS_CHARSET));
+    XtSetArg(args[4], XmNtitle, "Exit Program");
+    ExitProgram_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "ExitProgram_Dialog",
+  							args, 5);
+***************
+*** 84,92 ****
+      }
+    XtSetArg(args[0], XmNautoUnmanage, False);
+    XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate("Save and Exit Program?",
+!                                                          XmSTRING_DEFAULT_CHARSET));
+!   XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmSTRING_DEFAULT_CHARSET));
+!   XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmSTRING_DEFAULT_CHARSET));
+    XtSetArg(args[4], XmNtitle, "Save and Exit Program");
+    SaveAndExit_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "SaveAndExit_Dialog",
+  							args, 5);
+--- 84,92 ----
+      }
+    XtSetArg(args[0], XmNautoUnmanage, False);
+    XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate("Save and Exit Program?",
+!                                                          XmSTRING_OS_CHARSET));
+!   XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmSTRING_OS_CHARSET));
+!   XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmSTRING_OS_CHARSET));
+    XtSetArg(args[4], XmNtitle, "Save and Exit Program");
+    SaveAndExit_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "SaveAndExit_Dialog",
+  							args, 5);
+***************
+*** 144,152 ****
+  
+    XtSetArg(args[0], XmNautoUnmanage, False);
+    XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate("Save Current Address Book?",
+!                                                          XmSTRING_DEFAULT_CHARSET));
+!   XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmSTRING_DEFAULT_CHARSET));
+!   XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmSTRING_DEFAULT_CHARSET));
+    XtSetArg(args[4], XmNtitle, "Save");
+    SaveDontExit_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "SaveDontExit_Dialog",
+  							args, 5);
+--- 144,152 ----
+  
+    XtSetArg(args[0], XmNautoUnmanage, False);
+    XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate("Save Current Address Book?",
+!                                                          XmSTRING_OS_CHARSET));
+!   XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmSTRING_OS_CHARSET));
+!   XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmSTRING_OS_CHARSET));
+    XtSetArg(args[4], XmNtitle, "Save");
+    SaveDontExit_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "SaveDontExit_Dialog",
+  							args, 5);
+*** search.c~	1995-07-07 22:41:49.000000000 +0200
+--- search.c	2013-05-11 11:50:23.000000000 +0200
+***************
+*** 189,195 ****
+  					Search_Frame,
+  					NULL,0);
+    
+!   LabelString = XmStringCreate("Enter Search String: ", XmSTRING_DEFAULT_CHARSET),
+    Search_Label = XtVaCreateManagedWidget("Search_Label",
+  					 xmLabelWidgetClass, 
+  					 Search_Form,
+--- 189,195 ----
+  					Search_Frame,
+  					NULL,0);
+    
+!   LabelString = XmStringCreate("Enter Search String: ", XmSTRING_OS_CHARSET),
+    Search_Label = XtVaCreateManagedWidget("Search_Label",
+  					 xmLabelWidgetClass, 
+  					 Search_Form,
+***************
+*** 226,232 ****
+  					     XmNrightAttachment, XmATTACH_FORM,
+  					     NULL,0);
+    
+!   LabelString = XmStringCreate("Search", XmSTRING_DEFAULT_CHARSET),
+    SearchConfirm_Button = XtVaCreateManagedWidget("SearchConfirm_Button",
+  						 xmPushButtonWidgetClass,
+  						 Search_Form,
+--- 226,232 ----
+  					     XmNrightAttachment, XmATTACH_FORM,
+  					     NULL,0);
+    
+!   LabelString = XmStringCreate("Search", XmSTRING_OS_CHARSET),
+    SearchConfirm_Button = XtVaCreateManagedWidget("SearchConfirm_Button",
+  						 xmPushButtonWidgetClass,
+  						 Search_Form,
+***************
+*** 244,250 ****
+                  (XtCallbackProc) Search_Confirm, Search_Text);
+    
+  
+!   LabelString = XmStringCreate("Reset", XmSTRING_DEFAULT_CHARSET),
+    SearchReset_Button = XtVaCreateManagedWidget("SearchReset_Button",
+  					       xmPushButtonWidgetClass,
+  					       Search_Form,
+--- 244,250 ----
+                  (XtCallbackProc) Search_Confirm, Search_Text);
+    
+  
+!   LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+    SearchReset_Button = XtVaCreateManagedWidget("SearchReset_Button",
+  					       xmPushButtonWidgetClass,
+  					       Search_Form,
+***************
+*** 262,268 ****
+                  (XtCallbackProc) Search_Reset, Search_Text);
+    
+    
+!   LabelString = XmStringCreate("Close", XmSTRING_DEFAULT_CHARSET),
+    SearchClose_Button = XtVaCreateManagedWidget("SearchClose_Button",
+  					       xmPushButtonWidgetClass,
+  					       Search_Form,
+--- 262,268 ----
+                  (XtCallbackProc) Search_Reset, Search_Text);
+    
+    
+!   LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+    SearchClose_Button = XtVaCreateManagedWidget("SearchClose_Button",
+  					       xmPushButtonWidgetClass,
+  					       Search_Form,

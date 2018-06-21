@@ -1,0 +1,80 @@
+XmAddressBook  xmaddressbook
+	XmFrame  W_Main_Frame
+		XmForm  W_Main_Form
+			XmRowColumn  W_MenuBar
+				XmCascadeButtonGadget  File
+				XmCascadeButtonGadget  Misc
+				XmCascadeButtonGadget  Help
+				XmMenuShell  popup__pulldown
+					XmRowColumn  _pulldown
+						XmPushButtonGadget  Open Addressbook...
+						XmSeparatorGadget  
+						XmPushButtonGadget  Print...
+						XmSeparatorGadget  
+						XmSeparatorGadget  
+						XmPushButtonGadget  Save
+						XmPushButtonGadget  Save & Exit
+						XmSeparatorGadget  
+						XmPushButtonGadget  Exit
+					XmRowColumn  _pulldown
+						XmPushButtonGadget  Duplicate an Entry
+						XmPushButtonGadget  Search for an Entry
+						XmPushButtonGadget  Goto  an Entry
+						XmSeparatorGadget  
+						XmPushButtonGadget  Show Name List
+						XmPushButtonGadget  Show Business Card
+						XmSeparatorGadget  
+						XmPushButtonGadget  Send Mail
+					XmRowColumn  _pulldown
+						XmPushButtonGadget  Help
+						XmPushButtonGadget  Version
+			XmFrame  W_ButtonBar_Frame
+				XmForm  W_ButtonBar_Form
+					XmRowColumn  W_ButtonBar_RC
+						XmArrowButton  W_Prev_Button
+						XmArrowButton  W_Next_Button
+						XmPushButton  W_Search_Button
+						XmPushButton  W_Goto_Button
+						XmPushButton  W_Add_Button
+						XmPushButton  W_Delete_Button
+						XmPushButton  W_Update_Button
+						XmPushButton  W_Clear_Button
+			XmFrame  W_RoloForm_Frame
+				XmForm  W_RoloForm_Form
+					XmLabel  W_Name_Label
+					XmTextField  W_Name_Editor
+					XmLabel  W_WorkPhone_Label
+					XmTextField  W_WorkPhone_Editor
+					XmLabel  W_FaxNumber_Label
+					XmTextField  W_FaxNumber_Editor
+					XmLabel  W_HomePhone_Label
+					XmTextField  W_HomePhone_Editor
+					XmLabel  W_Company_Label
+					XmTextField  W_Company_Editor
+					XmLabel  W_EmailAddress_Label
+					XmTextField  W_EmailAddress_Editor
+					XmLabel  W_WorkAddress_Label
+					XmTextField  W_WorkAddress_Editor
+					XmLabel  W_HomeAddress_Label
+					XmTextField  W_HomeAddress_Editor
+					XmLabel  W_DateUpdated_Label
+					XmTextField  W_DateUpdated_Editor
+					XmLabel  W_Remarks_Label
+					XmText  W_Remarks_Editor
+					XmSeparator  W_RoloForm_Separator
+					XmLabel  W_CurrentNum_Label
+					XmTextField  W_CurrentNum_Editor
+					XmLabel  W_TotalNum_Label
+					XmTextField  W_TotalNum_Editor
+					XmSeparator  W_RoloForm_Separator
+					XmLabel  W_Help_Label
+	TransientShell  TipShell
+		XmLabel  TipLabel
+	XmDialogShell  ErrorMessage_popup
+		XmMessageBox  ErrorMessage
+			XmLabelGadget  Symbol
+			XmLabelGadget  Message
+			XmSeparatorGadget  Separator
+			XmPushButtonGadget  OK
+			XmPushButtonGadget  Cancel
+			XmPushButtonGadget  Help

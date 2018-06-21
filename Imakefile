@@ -1,0 +1,30 @@
+#ifdef HPArchitecture
+#if ProjectX < 5
+MOTIF = Motif1.1
+#else
+MOTIF = Motif1.2
+#endif
+CCOPTIONS = -Ae -I/usr/include/$(MOTIF)
+MOTIFLIB = -L/usr/lib/$(MOTIF)
+#endif
+
+HELPDIR = $(LIBDIR)/xmaddressbook
+HELPFILE = xmaddressbook.hlp
+
+DEFINES = -DHELP_FILE=\"$(HELPDIR)/$(HELPFILE)\" -DCURSES
+
+OBJS = file.o general.o help.o list.o main.o menu.o print.o quit.o search.o error_msg.o duplicate.o namelist.o goto.o card.o curses.o mail.o  preferences.o
+SRCS = file.c general.c help.c list.c main.c menu.c print.c quit.c search.c error_msg.c duplicate.c namelist.c goto.c card.c curses.c mail.c preferences.c
+
+/* LOCAL_LIBRARIES = $(MOTIFLIB) -lXm -lXt -lX11 */  
+
+/* uncomment this if you are using X11R6 */
+/* LOCAL_LIBRARIES = $(MOTIFLIB) -lXm -lXt -lX11  -lICE -lXi -lSM  -lXext */
+LOCAL_LIBRARIES = $(MOTIFLIB) -lXm -lXt -lX11  -lICE -lSM  -lXext -lcurses
+/* Hope that X11R6 has not merged too many libs */
+
+
+ComplexProgramTarget(xmaddressbook)
+InstallAppDefaults(XmAddressBook)
+MakeDirectories(install,$(HELPDIR))
+InstallNonExec($(HELPFILE),$(HELPDIR))

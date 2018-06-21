@@ -1,0 +1,124 @@
+XmAddressBook - A Motif Address Book - Version 1.5.3
+
+Copyright 1994,1995,1996 by Boyd Fletcher and Old Dominion University
+
+Send problems/questions to: boyd@ccpo.odu.edu
+
+NOTE: This used to be called XmRolodex.
+
+
+DESCRIPTION:
+
+XmAddressbook is a X11/Motif based Address Book program. It can convert the old
+rolo program's rolodex.dat files into its own format. 
+
+SUPPORTED SYSTEMS:
+
+Company			Machine			OS
+-------------------------------------------------------------------------
+Sun Microsystems	SPARCstations		Solaris 1.x (SUNOS 4.1.x)
+						using GCC
+Sun Microsystems	SPARCstations		Solaris 2.x (SUNOS 5.x) 
+IBM			RS/6000 		AIX 3.2.x and AIX 4.1
+Silicon Graphics	Indigo 2		IRIX 5.x
+DEC 			AXP 3000/600		OSF 2.0b
+Solbourne		Series 5/600            OS/MP 4.1C using GCC
+Hewlett Packard		HP 9000/735             HP-UX 9.X
+Novell			Intel x86, Pentium	UnixWare 1.1 & UnixWare 2.0
+BSDI			Intel x86, Pentium	BSDI 1.1
+OpenVMS			Alpha & VAX		OpenVMS 6.1 and 6.2 (X11R5/Motif 1.2)
+
+NOTE: I have tested XmAddressBook on the following SunOS, AIX, IRIX,
+and OS/MP.
+
+INSTALLATION: (except OpenVMS)
+
+1) Edit Imakefile if you are using X11R6
+
+2) If you have Imake, then type: xmkmf
+
+3) type: make
+
+4) type: make install
+
+5) type: make install.man
+
+OR,
+
+1) type: cp Makefile.noimake Makefile
+
+2) Edit the Makefile for your specific machine. Paying particular
+attention to the following fields:
+
+HELP_FILE=/usr/local/X11/lib/X11/xmaddressbook/xmaddressbook.hlp
+BIN_DIR=/usr/local/X11/bin
+MAN_DIR=/usr/local/X11/man/man1
+APP_DEFAULTS_DIR=/usr/local/X11/lib/X11/app-defaults
+APP_DEFAULTS=XmAddressbook
+MAN_PAGE=xmaddressbook.1
+
+3) type: make 
+
+4) type: make install
+
+
+OpenVMS:
+
+Take a look at the DESCRIP.MMS (similar to Unix's imake program) and
+MAKE.COM files. (thanks to Martin P.J. Zinser, m.zinser@gsi.de)
+
+PORTING:
+
+If you port it to another platform please send be the diffs and the
+options used to compile it.
+
+HOW TO GET IT:
+
+Using anonymous ftp:
+
+ftp ftp.ccpo.odu.edu
+
+Connected to ftp.ccpo.odu.edu.
+220 kuroshio FTP server (SunOS 4.1) ready.
+Name (ftp.ccpo.odu.edu:boyd): ftp
+331 Guest login ok, send ident as password.
+Password:  (use your login name here)
+230 Guest login ok, access restrictions apply.
+ftp> cd pub/boyd
+250 CWD command successful.
+ftp> bin
+200 Type set to I.
+ftp> get xmaddressbook-Maj.Min.Rev.tar.Z
+
+COPYING:
+
+You are free to do anything you want with this program except sell it
+or remove the above copyright.
+
+DISCLAIMER:
+
+BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
+FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT
+WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER
+PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND,
+EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE
+PROGRAM IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME
+THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
+REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR
+DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL
+DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM
+(INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED
+INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF
+THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER
+OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+
+
+
+
+

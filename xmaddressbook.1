@@ -1,0 +1,73 @@
+.TH XmAddressBook 1 "2/1/95" "XmAddressBook"
+.SH NAME
+XmAddressBook - XmAddressbook is a X11/Motif based address book program. 
+.SH SYNOPSIS
+.ta 8n
+\fBxmaddressBook\fP [options] [standard X options]
+.SH DESCRIPTION
+.I XmAddressbook
+is a X11/Motif based address book program. It allows the user to enter
+addressbook type information. It saves its data in a text file. It can
+output the addressbook in Postscript. It also has a Curses interface for
+searching and viewing the address book.
+
+.SH OPTIONS
+.PP
+.TP 8
+.B \-help or \-h     
+The options for the program
+
+.br
+.TP 8
+.B \-convert or \-c
+Convert old rolo .rolodex file to XmAddressbook format.
+
+.br
+.TP 8
+.B \-convert1.1 or \-c1.1   SourceFilename Destination Filename
+Convert XmAddressbook 1.0.X files to XmAddressbook 1.1 format.
+
+.br
+.TP 8
+.B \-user or \-u  User's_Home_Directory
+Another user's .xmaddressbook.dat file
+
+.br
+.TP 8
+.B \-version or \-v Get program version
+information.
+
+.br
+.TP 8
+.B \-curses  Use the Curses interface.
+
+.br.
+.PP
+.I XmAddressBook
+accepts all of the standard X Toolkit command line options.
+
+.SH X DEFAULTS
+This program accepts the usual defaults for toolkit applications.
+.SH ENVIRONMENT
+
+It uses the PRINTER and/or LASER environment variables to determine
+what printer to use.
+
+.PP
+.TP 8
+.B DISPLAY
+to get the default host and display number.
+.TP 8
+.SH "SEE ALSO"
+.SH BUGS
+Only searches by name, company, and remarks; not by the other fields.
+.SH COPYRIGHT
+Copyright 1994,1995 Boyd Fletcher and Old Dominion University
+.SH AUTHOR
+Boyd Fletcher
+.br
+boyd@ccpo.odu.edu
+.br
+Center For Coastal Physical Oceanography
+.br
+Old Dominion University

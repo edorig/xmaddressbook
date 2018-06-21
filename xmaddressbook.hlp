@@ -1,0 +1,132 @@
+XmAddressBook - A Motif Address Book 
+
+Copyright 1994,1995  by Boyd Fletcher and Old Dominion University
+
+Send problems/questions to: boyd@ccpo.odu.edu
+
+
+DESCRIPTION:
+
+XmAddressbook is a X11/Motif based Addressbook program. 
+
+
+CONVERSION:
+
+To convert old rolo .rolodex.dat files into xmaddressbook.dat files, do the
+following:
+
+cd ~/
+cp .rolodex.dat .xmaddressbook.dat
+xmaddressbook -convert
+
+To convert XmAddressBook 1.0.X files to XmAddressBook 1.1 files, do the following:
+
+cd ~/
+cp .xmaddressbook.dat .xmaddressbook.dat.OLD
+xmaddressbook -convert1.1 .xmaddressbook.dat.OLD  .xmaddressbook.dat
+
+
+ALTERNATIVE xmaddressbook.dat FILES:
+
+To use another users's xmaddressbook.dat file do the following:
+
+xmaddressbook -user user's_home_directory   
+
+For example on many systems the user's home directory is
+/home/loginname
+
+RUNNING THE CURSES INTERFACE:
+
+To start the Curses interface, do the following:
+
+xmaddressbook -curses
+
+
+ADDING A NEW ENTRY:
+
+To add a new entry you must first press the CLEAR button. You are then
+free to enter the information and press the ADD button. To cancel the
+add press either one of the arrow keys. The add routine automatically
+puts the list in alphabetical order.
+
+
+DELETING AN ENTRY:
+
+Goto the entry you want to delete and press the DELETE button.
+
+
+UPDATING AN ENTRY:
+
+Goto the entry you want to update, then make your modifications and
+press the UPDATE button.
+
+
+SEARCHING FOR AN ENTRY:
+
+To start a search press the SEARCH button. The search is case
+insensitive on the NAME field. The search routine will automatically
+wrap if you reach the end of the list.
+
+DUPLICATING AN ENTRY:
+
+To duplicate an entry n times, press the DUPLICATE button. Then enter
+the entry number and the number of times to duplicate that entry. Then
+press the DUPLICATE button (inside the Duplicate popup).
+
+GOTO AN ENTRY:
+
+To goto an entry, press the GOTO button. Then enter the entry number
+followed by GOTO button (inside the Goto popup).
+
+***********
+ FILE MENU
+***********
+
+OPEN ADDRESSBOOK:
+
+To open an alternative address book.
+
+
+SAVING:
+
+To save select either the SAVE or SAVE & EXIT options from the FILE
+menu.
+
+
+PRINTING:
+
+To print to a printer select the PRINT option from the FILE menu. A popup window
+will appear. After making sure that the value for "Print Command:" is correct, 
+press the PRINT button.
+
+To print to file select the PRINT option fromt he FILE menu. A popup
+window will appear. Press the "Output to a File" toggle button. After
+making sure that the value for "Filename:" is correct, press the PRINT
+button.
+
+***********
+ MISC MENU
+***********
+
+For SEARCH, DUPLICATE, GOTO see above.
+
+
+SHOW NAME LIST:
+
+This brings up a name list of all the people/things in the
+addressbook. You can select an entry in the list and it will be
+displayed in viewing area.
+
+SHOW BUSINESS CARD:
+
+This brings up a selected "business card" for the current entry. 
+It allows easy selecting of all or part of a entry so that
+it can be pasted into another program.
+
+SEND MAIL:
+
+Allows you to send mail with the entry's email address. It supports
+attachments of ASCII text ONLY!
+
+
+
