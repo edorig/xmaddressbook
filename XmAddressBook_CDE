@@ -1,5 +1,6 @@
 !
 ! fonts for application see DtStdAppFontNames(5)
+! Use only with ISO_8859_1/15 locales 
 !
 XmAddressBook*fontList: -dt-interface *-medium-r-normal-s*-*-*-*-*-*-iso8859-15
 

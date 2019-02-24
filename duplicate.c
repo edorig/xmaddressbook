@@ -164,7 +164,7 @@ void  Duplicate_Entry()
 					    XmNrightAttachment, XmATTACH_FORM,
 					    NULL,0);
   
-  LabelString = XmStringCreate("Entry Number: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Entry Number: ", XmFONTLIST_DEFAULT_TAG),
   Duplicate_Label = XtVaCreateManagedWidget("Duplicate_Label",
 					    xmLabelWidgetClass, 
 					    Duplicate_Form2,
@@ -195,7 +195,7 @@ void  Duplicate_Entry()
   XtAddCallback(DuplicateEntryNum_Text, XmNactivateCallback, 
                 (XtCallbackProc) Duplicate_Confirm, Duplicate_Popup);
   
-  LabelString = XmStringCreate("Duplicate n Times: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Duplicate n Times: ", XmFONTLIST_DEFAULT_TAG),
   Duplicate_Label = XtVaCreateManagedWidget("Duplicate_Label",
 					    xmLabelWidgetClass, 
 					    Duplicate_Form2,
@@ -238,7 +238,7 @@ void  Duplicate_Entry()
 						XmNrightAttachment, XmATTACH_FORM,
 						NULL,0);
   
-  LabelString = XmStringCreate("Duplicate", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Duplicate", XmFONTLIST_DEFAULT_TAG),
   DuplicateConfirm_Button = XtVaCreateManagedWidget("DuplicateConfirm_Button",
 						    xmPushButtonWidgetClass,
 						    Duplicate_Form,
@@ -256,7 +256,7 @@ void  Duplicate_Entry()
                 (XtCallbackProc) Duplicate_Confirm, Duplicate_Popup);
   
 
-  LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Reset", XmFONTLIST_DEFAULT_TAG),
   DuplicateReset_Button = XtVaCreateManagedWidget("DuplicateReset_Button",
 						  xmPushButtonWidgetClass,
 						  Duplicate_Form,
@@ -274,7 +274,7 @@ void  Duplicate_Entry()
                 (XtCallbackProc) Duplicate_Reset, NULL);
   
   
-  LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Close", XmFONTLIST_DEFAULT_TAG),
   DuplicateClose_Button = XtVaCreateManagedWidget("DuplicateClose_Button",
 					       xmPushButtonWidgetClass,
 					       Duplicate_Form,

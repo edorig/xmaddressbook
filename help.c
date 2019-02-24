@@ -87,7 +87,7 @@ void  Display_Help(Widget   w,
 						  XmNbottomPosition, 90,
 						  NULL,0);
   
-  LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Close", XmFONTLIST_DEFAULT_TAG),
   DisplayHelpClose_Button = XtVaCreateManagedWidget("DisplayHelpClose_Button",
 						    xmPushButtonWidgetClass,
 						    DisplayHelp_Form,
@@ -128,8 +128,8 @@ void  Display_Version(Widget   w,
 					 XmNtitle, "Help",
 
   XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate(PROGRAM_DESCRIPTION,
-							 XmSTRING_OS_CHARSET));
-  XtSetArg(args[2], XmNokLabelString, XmStringCreate("Close",XmSTRING_OS_CHARSET));
+							 XmFONTLIST_DEFAULT_TAG));
+  XtSetArg(args[2], XmNokLabelString, XmStringCreate("Close",XmFONTLIST_DEFAULT_TAG));
   XtSetArg(args[3], XmNtitle, "Version");
   DisplayVersion_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "DisplayVersion_Dialog", args, 4);
   

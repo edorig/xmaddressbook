@@ -104,7 +104,7 @@ void Show_BCard(Rolo_Type *CurrentEntry)
 				       XmNrubberPositioning,True,
 				       NULL,0);
   
-  LabelString = XmStringCreate("Business Card", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Business Card", XmFONTLIST_DEFAULT_TAG),
   BCard_Label = XtVaCreateManagedWidget("BCard_Label",
 					xmLabelWidgetClass, 
 					BCard_Form,
@@ -158,7 +158,7 @@ void Show_BCard(Rolo_Type *CurrentEntry)
 					    XmNbottomPosition, 90,
 					    NULL,0);
     
-  LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Close", XmFONTLIST_DEFAULT_TAG),
   BCardClose_Button = XtVaCreateManagedWidget("BCardClose_Button",
 					      xmPushButtonWidgetClass,
 					      BCard_Form,

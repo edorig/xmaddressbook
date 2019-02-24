@@ -378,7 +378,7 @@ void  Print_AddressBook(Widget   w,
 				       Print_Frame,
 				       NULL,0);
   
-  LabelString = XmStringCreate("Range Start: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Range Start: ", XmFONTLIST_DEFAULT_TAG),
   PrintRangeStart_Label = XtVaCreateManagedWidget("PrintRangeStart_Label",
 						  xmLabelWidgetClass, 
 						  Print_Form,
@@ -404,7 +404,7 @@ void  Print_AddressBook(Widget   w,
 						 XmNtopOffset, 10,
 						 NULL,0);
 
-  LabelString = XmStringCreate("Range End: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Range End: ", XmFONTLIST_DEFAULT_TAG),
   PrintRangeEnd_Label = XtVaCreateManagedWidget("PrintRangeEnd_Label",
 						xmLabelWidgetClass, 
 						Print_Form,
@@ -453,7 +453,7 @@ void  Print_AddressBook(Widget   w,
 					 XmNradioBehavior, True,
 					 NULL,0);
   
-  LabelString = XmStringCreate("Postscript Output", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Postscript Output", XmFONTLIST_DEFAULT_TAG),
   PrintTypePS_Toggle = XtVaCreateManagedWidget("PrintTypePS_Toggle",
 					       xmToggleButtonWidgetClass, 
 					       PrintType_RC,
@@ -462,7 +462,7 @@ void  Print_AddressBook(Widget   w,
   XmStringFree(LabelString);
   XmToggleButtonSetState(PrintTypePS_Toggle,True,True);
   
-  LabelString = XmStringCreate("Text Output", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Text Output", XmFONTLIST_DEFAULT_TAG),
   PrintTypeText_Toggle = XtVaCreateManagedWidget("PrintTypeText_Toggle",
 						 xmToggleButtonWidgetClass, 
 						 PrintType_RC,
@@ -486,7 +486,7 @@ void  Print_AddressBook(Widget   w,
 				     XmNradioBehavior, True,
 				     NULL,0);
   
-  LabelString = XmStringCreate("Output to a Printer", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Output to a Printer", XmFONTLIST_DEFAULT_TAG),
   PrintLpr_Toggle = XtVaCreateManagedWidget("PrintLpr_Toggle",
 					    xmToggleButtonWidgetClass, 
 					    Print_RC,
@@ -497,7 +497,7 @@ void  Print_AddressBook(Widget   w,
                 (XtCallbackProc) Lpr_Toggle_Callback, Print_Popup);
   XmToggleButtonSetState(PrintLpr_Toggle,True,True);
 
-  LabelString = XmStringCreate("Output to a File", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Output to a File", XmFONTLIST_DEFAULT_TAG),
   PrintFile_Toggle = XtVaCreateManagedWidget("PrintFile_Toggle",
 					     xmToggleButtonWidgetClass, 
 					     Print_RC,
@@ -507,7 +507,7 @@ void  Print_AddressBook(Widget   w,
   XtAddCallback(PrintFile_Toggle, XmNarmCallback, 
                 (XtCallbackProc) File_Toggle_Callback, Print_Popup);
 
-  LabelString = XmStringCreate("Print Command: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Print Command: ", XmFONTLIST_DEFAULT_TAG),
   PrintLpr_Label = XtVaCreateManagedWidget("PrintLpr_Label",
 					   xmLabelWidgetClass, 
 					   Print_Form,
@@ -538,7 +538,7 @@ void  Print_AddressBook(Widget   w,
   XmTextFieldSetString(PrintLpr_Text,DEFAULT_PRINT_COMMAND);
   
 
-  LabelString = XmStringCreate("Filename: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Filename: ", XmFONTLIST_DEFAULT_TAG),
   PrintFile_Label = XtVaCreateManagedWidget("PrintFile_Label",
 					    xmLabelWidgetClass, 
 					    Print_Form,
@@ -581,7 +581,7 @@ void  Print_AddressBook(Widget   w,
 					    NULL,0);
   
 
-  LabelString = XmStringCreate("Print", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Print", XmFONTLIST_DEFAULT_TAG),
   PrintConfirm_Button = XtVaCreateManagedWidget("PrintConfirm_Button",
 						xmPushButtonWidgetClass,
 						Print_Form,
@@ -599,7 +599,7 @@ void  Print_AddressBook(Widget   w,
                 (XtCallbackProc) Print_Confirm, Print_Popup);
   
   
-  LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Reset", XmFONTLIST_DEFAULT_TAG),
   PrintReset_Button = XtVaCreateManagedWidget("PrintReset_Button",
 					      xmPushButtonWidgetClass,
 					      Print_Form,
@@ -617,7 +617,7 @@ void  Print_AddressBook(Widget   w,
                 (XtCallbackProc) Print_Reset, NULL);
   
   
-  LabelString = XmStringCreate("Cancel", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Cancel", XmFONTLIST_DEFAULT_TAG),
   PrintClose_Button = XtVaCreateManagedWidget("PrintClose_Button",
 					      xmPushButtonWidgetClass,
 					      Print_Form,

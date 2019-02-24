@@ -574,7 +574,7 @@ void OK_OpenAddressBook(Widget   w,
   int lcv = 0;
   char *Filename;
 
-  if (!XmStringGetLtoR(cbs->value,XmSTRING_OS_CHARSET,&Filename))
+  if (!XmStringGetLtoR(cbs->value,XmFONTLIST_DEFAULT_TAG,&Filename))
     {
       XtUnrealizeWidget(w);
       return;      
@@ -640,7 +640,7 @@ void Open_AddressBook_Dialog()
   XtVaSetValues(XtParent(W_FileDialog),
 		XmNtitle,"XmAddressBook File Selector",
 		NULL,0);
-  DirString = XmStringCreate((char *)getenv("HOME"), XmSTRING_OS_CHARSET),
+  DirString = XmStringCreate((char *)getenv("HOME"), XmFONTLIST_DEFAULT_TAG),
   XtVaSetValues(W_FileDialog,
 		XmNtextColumns, 60,
 		XmNdirectory, DirString,

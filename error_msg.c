@@ -15,8 +15,8 @@ void  ErrorMessage(char *ErrorMessageString)
   XmString ErrorMessageXmString;
   XmString OkXmString;
 
-  ErrorMessageXmString = XmStringLtoRCreate(ErrorMessageString, XmSTRING_OS_CHARSET);
-  OkXmString = XmStringCreate("Close",XmSTRING_OS_CHARSET);
+  ErrorMessageXmString = XmStringLtoRCreate(ErrorMessageString, XmFONTLIST_DEFAULT_TAG);
+  OkXmString = XmStringCreate("Close",XmFONTLIST_DEFAULT_TAG);
 
   ErrorMessage_Dialog = XmCreateErrorDialog(W_TopLevel,
 					    "ErrorMessage",
@@ -58,8 +58,8 @@ void  InfoMessage(char *InfoMessageString)
   XmString InfoMessageXmString;
   XmString OkXmString;
 
-  InfoMessageXmString = XmStringLtoRCreate(InfoMessageString, XmSTRING_OS_CHARSET);
-  OkXmString = XmStringCreate("Close",XmSTRING_OS_CHARSET);
+  InfoMessageXmString = XmStringLtoRCreate(InfoMessageString, XmFONTLIST_DEFAULT_TAG);
+  OkXmString = XmStringCreate("Close",XmFONTLIST_DEFAULT_TAG);
 
   InfoMessage_Dialog = XmCreateInformationDialog(W_TopLevel,
 						 "InfoMessage",

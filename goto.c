@@ -84,7 +84,7 @@ void  Goto_Form()
 				      Goto_Frame,
 				      NULL,0);
   
-  LabelString = XmStringCreate("Goto Number: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Goto Number: ", XmFONTLIST_DEFAULT_TAG),
   Goto_Label = XtVaCreateManagedWidget("Goto_Label",
 				       xmLabelWidgetClass, 
 				       Goto_Form,
@@ -121,7 +121,7 @@ void  Goto_Form()
 					     XmNrightAttachment, XmATTACH_FORM,
 					     NULL,0);
   
-  LabelString = XmStringCreate("Goto", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Goto", XmFONTLIST_DEFAULT_TAG),
   GotoConfirm_Button = XtVaCreateManagedWidget("GotoConfirm_Button",
 						 xmPushButtonWidgetClass,
 						 Goto_Form,
@@ -139,7 +139,7 @@ void  Goto_Form()
                 (XtCallbackProc) Goto_Confirm, Goto_Text);
   
 
-  LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Reset", XmFONTLIST_DEFAULT_TAG),
   GotoReset_Button = XtVaCreateManagedWidget("GotoReset_Button",
 					       xmPushButtonWidgetClass,
 					       Goto_Form,
@@ -157,7 +157,7 @@ void  Goto_Form()
                 (XtCallbackProc) Goto_Reset, Goto_Text);
   
   
-  LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Close", XmFONTLIST_DEFAULT_TAG),
   GotoClose_Button = XtVaCreateManagedWidget("GotoClose_Button",
 					       xmPushButtonWidgetClass,
 					       Goto_Form,

@@ -63,6 +63,11 @@ char **argv)
   struct passwd *PasswdEntry;
   Bool AlternateUserFile = False;
   Atom WM_DELETE_WINDOW;
+  String fallback_resources[] = {
+    "*fontList: -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1",
+    NULL,
+  };
+
   
   if (argc >= 1)
     {
@@ -164,9 +169,10 @@ char **argv)
       exit(0);
     }
 #endif
-  
+
+  XtSetLanguageProc(NULL,NULL,NULL); 
   W_TopLevel = XtVaAppInitialize(&G_ApplicationContext, "XmAddressBook", NULL, 0,
-				 &argc, argv, NULL, NULL);
+				 &argc, argv, fallback_resources, NULL);
   
   
   XtVaSetValues(W_TopLevel,  
@@ -259,7 +265,7 @@ void Create_RoloForm()
 					     W_RoloForm_Frame,
 					     NULL,0);
 
-  LabelString = XmStringCreate("Name: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Name: ", XmFONTLIST_DEFAULT_TAG),
   W_Name_Label= XtVaCreateManagedWidget("W_Name_Label",
 					xmLabelWidgetClass,
 					W_RoloForm_Form,
@@ -285,7 +291,7 @@ void Create_RoloForm()
   XtAddEventHandler(W_Name_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "name");
 
-  LabelString = XmStringCreate("Work Phone: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Work Phone: ", XmFONTLIST_DEFAULT_TAG),
   W_WorkPhone_Label= XtVaCreateManagedWidget("W_WorkPhone_Label",
 					     xmLabelWidgetClass,
 					     W_RoloForm_Form,
@@ -313,7 +319,7 @@ void Create_RoloForm()
   XtAddEventHandler(W_WorkPhone_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "wphone");
 
-  LabelString = XmStringCreate("Fax Number: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Fax Number: ", XmFONTLIST_DEFAULT_TAG),
   W_FaxNumber_Label= XtVaCreateManagedWidget("W_FaxNumber_Label",
 					     xmLabelWidgetClass,
 					     W_RoloForm_Form,
@@ -341,7 +347,7 @@ void Create_RoloForm()
   XtAddEventHandler(W_FaxNumber_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "fax");
 
-  LabelString = XmStringCreate("Home Phone: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Home Phone: ", XmFONTLIST_DEFAULT_TAG),
   W_HomePhone_Label= XtVaCreateManagedWidget("W_HomePhone_Label",
 					     xmLabelWidgetClass,
 					     W_RoloForm_Form,
@@ -369,7 +375,7 @@ void Create_RoloForm()
   XtAddEventHandler(W_HomePhone_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "hphone");
 
-  LabelString = XmStringCreate("Company: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Company: ", XmFONTLIST_DEFAULT_TAG),
   W_Company_Label= XtVaCreateManagedWidget("W_Company_Label",
 					   xmLabelWidgetClass,
 					   W_RoloForm_Form,
@@ -397,7 +403,7 @@ void Create_RoloForm()
   XtAddEventHandler(W_Company_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "company");
   
-  LabelString = XmStringCreate("Email Address: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Email Address: ", XmFONTLIST_DEFAULT_TAG),
   W_EmailAddress_Label= XtVaCreateManagedWidget("W_EmailAddress_Label",
 					     xmLabelWidgetClass,
 					     W_RoloForm_Form,
@@ -425,7 +431,7 @@ void Create_RoloForm()
   XtAddEventHandler(W_EmailAddress_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "email");
 
-  LabelString = XmStringCreate("Work Address: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Work Address: ", XmFONTLIST_DEFAULT_TAG),
   W_WorkAddress_Label= XtVaCreateManagedWidget("W_WorkAddress_Label",
 					       xmLabelWidgetClass,
 					       W_RoloForm_Form,
@@ -453,7 +459,7 @@ void Create_RoloForm()
   XtAddEventHandler(W_WorkAddress_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "waddress");
   
-  LabelString = XmStringCreate("Home Address: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Home Address: ", XmFONTLIST_DEFAULT_TAG),
   W_HomeAddress_Label= XtVaCreateManagedWidget("W_HomeAddress_Label",
 					       xmLabelWidgetClass,
 					       W_RoloForm_Form,
@@ -482,7 +488,7 @@ void Create_RoloForm()
 		    (XtPointer) "haddress");
 
   
-  LabelString = XmStringCreate("Date Updated: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Date Updated: ", XmFONTLIST_DEFAULT_TAG),
   W_DateUpdated_Label= XtVaCreateManagedWidget("W_DateUpdated_Label",
 					       xmLabelWidgetClass,
 					       W_RoloForm_Form,
@@ -511,7 +517,7 @@ void Create_RoloForm()
   XtAddEventHandler(W_DateUpdated_Editor,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "date");
   
-  LabelString = XmStringCreate("Remarks: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Remarks: ", XmFONTLIST_DEFAULT_TAG),
   W_Remarks_Label= XtVaCreateManagedWidget("W_Remarks_Label",
 					   xmLabelWidgetClass,
 					   W_RoloForm_Form,
@@ -556,7 +562,7 @@ void Create_RoloForm()
 						 NULL, 0);
   
   
-  LabelString = XmStringCreate("Current Entry:  ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Current Entry:  ", XmFONTLIST_DEFAULT_TAG),
   W_CurrentNum_Label= XtVaCreateManagedWidget("W_CurrentNum_Label",
 					      xmLabelWidgetClass,
 					      W_RoloForm_Form,
@@ -584,7 +590,7 @@ void Create_RoloForm()
 		    (XtPointer) "current");
   
   
-  LabelString = XmStringCreate("Total Number of Entries:  ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Total Number of Entries:  ", XmFONTLIST_DEFAULT_TAG),
   W_TotalNum_Label= XtVaCreateManagedWidget("W_TotalNum_Label",
 					    xmLabelWidgetClass,
 					    W_RoloForm_Form,
@@ -624,7 +630,7 @@ void Create_RoloForm()
 						 XmNorientation, XmHORIZONTAL,
 						 NULL, 0);
   
-  LabelString = XmStringCreate("Help: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Help: ", XmFONTLIST_DEFAULT_TAG),
   W_Help_Label= XtVaCreateManagedWidget("W_Help_Label",
 					xmLabelWidgetClass,
 					W_RoloForm_Form,
@@ -681,7 +687,7 @@ void Create_ButtonBar()
 					   XmNentryAlignment, XmALIGNMENT_CENTER,
 					   NULL,0);
 
-  LabelString = XmStringCreate("Previous", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Previous", XmFONTLIST_DEFAULT_TAG),
   W_Prev_Button= XtVaCreateManagedWidget("W_Prev_Button",
 					 xmArrowButtonWidgetClass,
 					 W_ButtonBar_RC,
@@ -695,7 +701,7 @@ void Create_ButtonBar()
 		    (XtPointer) "prev");
 
 
-  LabelString = XmStringCreate("Next", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Next", XmFONTLIST_DEFAULT_TAG),
   W_Next_Button= XtVaCreateManagedWidget("W_Next_Button",
 					 xmArrowButtonWidgetClass,
 					 W_ButtonBar_RC,
@@ -708,7 +714,7 @@ void Create_ButtonBar()
   XtAddEventHandler(W_Next_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "next");
 
-  LabelString = XmStringCreate("Search", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Search", XmFONTLIST_DEFAULT_TAG),
   W_Search_Button= XtVaCreateManagedWidget("W_Search_Button",
 					 xmPushButtonWidgetClass,
 					 W_ButtonBar_RC,
@@ -720,7 +726,7 @@ void Create_ButtonBar()
   XtAddEventHandler(W_Search_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "search");
 
-  LabelString = XmStringCreate("Goto", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Goto", XmFONTLIST_DEFAULT_TAG),
   W_Goto_Button= XtVaCreateManagedWidget("W_Goto_Button",
 					 xmPushButtonWidgetClass,
 					 W_ButtonBar_RC,
@@ -732,7 +738,7 @@ void Create_ButtonBar()
   XtAddEventHandler(W_Goto_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "goto");
 
-  LabelString = XmStringCreate("Add", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Add", XmFONTLIST_DEFAULT_TAG),
   W_Add_Button= XtVaCreateManagedWidget("W_Add_Button",
 					 xmPushButtonWidgetClass,
 					 W_ButtonBar_RC,
@@ -744,7 +750,7 @@ void Create_ButtonBar()
   XtAddEventHandler(W_Add_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "add");
 
-  LabelString = XmStringCreate("Delete", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Delete", XmFONTLIST_DEFAULT_TAG),
   W_Delete_Button= XtVaCreateManagedWidget("W_Delete_Button",
 					 xmPushButtonWidgetClass,
 					 W_ButtonBar_RC,
@@ -756,7 +762,7 @@ void Create_ButtonBar()
   XtAddEventHandler(W_Delete_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "delete");
 
-  LabelString = XmStringCreate("Update", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Update", XmFONTLIST_DEFAULT_TAG),
   W_Update_Button= XtVaCreateManagedWidget("W_Update_Button",
 					 xmPushButtonWidgetClass,
 					 W_ButtonBar_RC,
@@ -768,7 +774,7 @@ void Create_ButtonBar()
   XtAddEventHandler(W_Update_Button,EnterWindowMask,False,(XtEventHandler) Help_Line, 
 		    (XtPointer) "update");
 
-  LabelString = XmStringCreate("Clear", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Clear", XmFONTLIST_DEFAULT_TAG),
   W_Clear_Button= XtVaCreateManagedWidget("W_Clear_Button",
 					 xmPushButtonWidgetClass,
 					 W_ButtonBar_RC,
@@ -781,7 +787,7 @@ void Create_ButtonBar()
 		    (XtPointer) "clear");
   
 /*
-  LabelString = XmStringCreate("Duplicate", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Duplicate", XmFONTLIST_DEFAULT_TAG),
   W_Duplicate_Button= XtVaCreateManagedWidget("W_Duplicate_Button",
 					      xmPushButtonWidgetClass,
 					      W_ButtonBar_RC,
@@ -1069,7 +1075,7 @@ void AddEntry_RoloForm()
   if (G_NameListVisible == True)
     {
 /*       fprintf(stderr,"ADD TO NAMELIST %d\n",G_CurrentNumInRoloList); */
-      ListString = XmStringCreate(Entry.Name, XmSTRING_OS_CHARSET);
+      ListString = XmStringCreate(Entry.Name, XmFONTLIST_DEFAULT_TAG);
       XmListAddItem(NameList_List,ListString,G_CurrentNumInRoloList);
       XmListSelectPos(NameList_List,G_CurrentNumInRoloList,True);
       XmStringFree(ListString);
@@ -1125,7 +1131,7 @@ void UpdateEntry_RoloForm()
     {
 /*       fprintf(stderr,"UPDATE TO NAMELIST  %d\n",G_CurrentNumInRoloList); */
       XmListDeletePos(NameList_List,G_CurrentNumInRoloList); 
-      ListString = XmStringCreate(Entry.Name, XmSTRING_OS_CHARSET);
+      ListString = XmStringCreate(Entry.Name, XmFONTLIST_DEFAULT_TAG);
       XmListAddItem(NameList_List,ListString,G_CurrentNumInRoloList);
       XmStringFree(ListString);
     }
@@ -1204,7 +1210,7 @@ void  Help_Line(Widget   w,
       if (strcmp(Help_List[lcv].Key,Key) == 0)
 	{
 	  sprintf(LabelBuffer,"Help: %s",Help_List[lcv].Value);
-	  LabelString = XmStringCreate(LabelBuffer, XmSTRING_OS_CHARSET),
+	  LabelString = XmStringCreate(LabelBuffer, XmFONTLIST_DEFAULT_TAG),
 	  XtVaSetValues(W_Help_Label,
 			XmNlabelString,LabelString,
 			NULL,0);

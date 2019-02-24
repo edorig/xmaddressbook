@@ -1,4 +1,6 @@
-!
+! Use these application defaults only with ISO_8859_1 type locales 
+! In UTF-8 locales the default font is appropriate.
+! 
 ! fonts for application see DtStdAppFontNames(5)
 !
 XmAddressBook*fontList: -dt-application-medium-r-normal-serif-*-140-*-*-p-*-iso8859-15

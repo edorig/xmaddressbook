@@ -92,7 +92,7 @@ void  Show_Preferences(Widget   w,
 				       Pref_Frame,
 				       NULL,0);
   
-  LabelString = XmStringCreate("Range Start: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Range Start: ", XmFONTLIST_DEFAULT_TAG),
   PrefRangeStart_Label = XtVaCreateManagedWidget("PrefRangeStart_Label",
 						  xmLabelWidgetClass, 
 						  Pref_Form,
@@ -118,7 +118,7 @@ void  Show_Preferences(Widget   w,
 						 XmNtopOffset, 10,
 						 NULL,0);
 
-  LabelString = XmStringCreate("Range End: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Range End: ", XmFONTLIST_DEFAULT_TAG),
   PrefRangeEnd_Label = XtVaCreateManagedWidget("PrefRangeEnd_Label",
 						xmLabelWidgetClass, 
 						Pref_Form,
@@ -161,7 +161,7 @@ void  Show_Preferences(Widget   w,
 					 XmNradioBehavior, True,
 					 NULL,0);
   
-  LabelString = XmStringCreate("Postscript Output", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Postscript Output", XmFONTLIST_DEFAULT_TAG),
   PrefTypePS_Toggle = XtVaCreateManagedWidget("PrefTypePS_Toggle",
 					       xmToggleButtonWidgetClass, 
 					       PrefType_RC,
@@ -170,7 +170,7 @@ void  Show_Preferences(Widget   w,
   XmStringFree(LabelString);
   XmToggleButtonSetState(PrefTypePS_Toggle,True,True);
   
-  LabelString = XmStringCreate("Text Output", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Text Output", XmFONTLIST_DEFAULT_TAG),
   PrefTypeText_Toggle = XtVaCreateManagedWidget("PrefTypeText_Toggle",
 						 xmToggleButtonWidgetClass, 
 						 PrefType_RC,
@@ -194,7 +194,7 @@ void  Show_Preferences(Widget   w,
 				     XmNradioBehavior, True,
 				     NULL,0);
   
-  LabelString = XmStringCreate("Output to a Prefer", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Output to a Prefer", XmFONTLIST_DEFAULT_TAG),
   PrefLpr_Toggle = XtVaCreateManagedWidget("PrefLpr_Toggle",
 					    xmToggleButtonWidgetClass, 
 					    Pref_RC,
@@ -206,7 +206,7 @@ void  Show_Preferences(Widget   w,
   XmToggleButtonSetState(PrefLpr_Toggle,True,True);
 */
 
-  LabelString = XmStringCreate("Output to a File", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Output to a File", XmFONTLIST_DEFAULT_TAG),
   PrefFile_Toggle = XtVaCreateManagedWidget("PrefFile_Toggle",
 					     xmToggleButtonWidgetClass, 
 					     Pref_RC,
@@ -216,7 +216,7 @@ void  Show_Preferences(Widget   w,
 /*  XtAddCallback(PrefFile_Toggle, XmNarmCallback, 
                 (XtCallbackProc) File_Toggle_Callback, Pref_Popup);
 */
-  LabelString = XmStringCreate("Pref Command: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Pref Command: ", XmFONTLIST_DEFAULT_TAG),
   PrefLpr_Label = XtVaCreateManagedWidget("PrefLpr_Label",
 					   xmLabelWidgetClass, 
 					   Pref_Form,
@@ -247,7 +247,7 @@ void  Show_Preferences(Widget   w,
 /*   XmTextFieldSetString(PrefLpr_Text,DEFAULT_Pref_COMMAND); */
   
 
-  LabelString = XmStringCreate("Filename: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Filename: ", XmFONTLIST_DEFAULT_TAG),
   PrefFile_Label = XtVaCreateManagedWidget("PrefFile_Label",
 					    xmLabelWidgetClass, 
 					    Pref_Form,
@@ -290,7 +290,7 @@ void  Show_Preferences(Widget   w,
 					    NULL,0);
   
 
-  LabelString = XmStringCreate("Pref", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Pref", XmFONTLIST_DEFAULT_TAG),
   PrefConfirm_Button = XtVaCreateManagedWidget("PrefConfirm_Button",
 						xmPushButtonWidgetClass,
 						Pref_Form,
@@ -308,7 +308,7 @@ void  Show_Preferences(Widget   w,
                 (XtCallbackProc) Pref_Confirm, Pref_Popup);
   
   
-  LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Reset", XmFONTLIST_DEFAULT_TAG),
   PrefReset_Button = XtVaCreateManagedWidget("PrefReset_Button",
 					      xmPushButtonWidgetClass,
 					      Pref_Form,
@@ -326,7 +326,7 @@ void  Show_Preferences(Widget   w,
                 (XtCallbackProc) Pref_Reset, NULL);
   
   
-  LabelString = XmStringCreate("Cancel", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Cancel", XmFONTLIST_DEFAULT_TAG),
   PrefClose_Button = XtVaCreateManagedWidget("PrefClose_Button",
 					      xmPushButtonWidgetClass,
 					      Pref_Form,

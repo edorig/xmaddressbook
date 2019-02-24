@@ -34,7 +34,7 @@ void BuildNameList(Widget ListWidget)
   Temp = G_RoloList;
   while (Temp != NULL)
     {
-      ListString = XmStringCreate(Temp->Name, XmSTRING_OS_CHARSET);
+      ListString = XmStringCreate(Temp->Name, XmFONTLIST_DEFAULT_TAG);
       XmListAddItem(ListWidget,ListString,0);
       XmStringFree(ListString);
       Temp = Temp->Next;
@@ -78,7 +78,7 @@ void  Show_Name_List()
 					NameList_Frame,
 					NULL,0);
   
-  LabelString = XmStringCreate("Name", XmSTRING_OS_CHARSET);
+  LabelString = XmStringCreate("Name", XmFONTLIST_DEFAULT_TAG);
   NameList_Label = XtVaCreateManagedWidget("NameList_Label",
 					   xmLabelWidgetClass, 
 					   NameList_Form,
@@ -135,7 +135,7 @@ void  Show_Name_List()
 					       NULL,0);
   
   
-  LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Close", XmFONTLIST_DEFAULT_TAG),
   NameListClose_Button = XtVaCreateManagedWidget("NameListClose_Button",
 					       xmPushButtonWidgetClass,
 					       NameList_Form,

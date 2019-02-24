@@ -199,7 +199,7 @@ void  Send_Mail_Popup()
 				       XmNbottomPosition, 30,
 				       NULL,0);
   
-  LabelString = XmStringCreate("To: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("To: ", XmFONTLIST_DEFAULT_TAG),
   MailTo_Label = XtVaCreateManagedWidget("MailTo_Label",
 					 xmLabelWidgetClass, 
 					 Mail_Form2,
@@ -230,7 +230,7 @@ void  Send_Mail_Popup()
   
   XmTextFieldSetString(MailTo_Text,G_CurrentEntryInRoloList->EmailAddress);
 
-  LabelString = XmStringCreate("CC: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("CC: ", XmFONTLIST_DEFAULT_TAG),
   MailCC_Label = XtVaCreateManagedWidget("MailCC_Label",
 					 xmLabelWidgetClass, 
 					 Mail_Form2,
@@ -260,7 +260,7 @@ void  Send_Mail_Popup()
 					NULL,0);
   
   
-  LabelString = XmStringCreate("BCC: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("BCC: ", XmFONTLIST_DEFAULT_TAG),
   MailBCC_Label = XtVaCreateManagedWidget("MailBCC_Label",
 					  xmLabelWidgetClass, 
 					  Mail_Form2,
@@ -289,7 +289,7 @@ void  Send_Mail_Popup()
 					 XmNbottomPosition, 60,
 					 NULL,0);
   
-  LabelString = XmStringCreate("Subject: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Subject: ", XmFONTLIST_DEFAULT_TAG),
   MailSubject_Label = XtVaCreateManagedWidget("MailSubject_Label",
 					      xmLabelWidgetClass, 
 					      Mail_Form2,
@@ -318,7 +318,7 @@ void  Send_Mail_Popup()
 					     XmNbottomPosition, 80,
 					     NULL,0);
   
-  LabelString = XmStringCreate("Attachment: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Attachment: ", XmFONTLIST_DEFAULT_TAG),
   MailAttachment_Label = XtVaCreateManagedWidget("MailAttachment_Label",
 						 xmLabelWidgetClass, 
 						 Mail_Form2,
@@ -346,7 +346,7 @@ void  Send_Mail_Popup()
 						XmNcolumns, 50,
 						NULL,0);
 
-  LabelString = XmStringCreate("Browse...", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Browse...", XmFONTLIST_DEFAULT_TAG),
   MailAttachment_Button = XtVaCreateManagedWidget("MailAttachment_Button",
 						  xmPushButtonWidgetClass, 
 						  Mail_Form2,
@@ -408,7 +408,7 @@ void  Send_Mail_Popup()
 					   XmNbottomPosition, 90,
 					   NULL,0);
   
-  LabelString = XmStringCreate("Send", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Send", XmFONTLIST_DEFAULT_TAG),
   MailConfirm_Button = XtVaCreateManagedWidget("MailConfirm_Button",
 					       xmPushButtonWidgetClass,
 					       Mail_Form,
@@ -425,7 +425,7 @@ void  Send_Mail_Popup()
                 (XtCallbackProc) Mail_Confirm, Mail_Popup);
   
   
-  LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Reset", XmFONTLIST_DEFAULT_TAG),
   MailReset_Button = XtVaCreateManagedWidget("MailReset_Button",
 					     xmPushButtonWidgetClass,
 					     Mail_Form,
@@ -442,7 +442,7 @@ void  Send_Mail_Popup()
                 (XtCallbackProc) Mail_Reset, NULL);
   
   
-  LabelString = XmStringCreate("Cancel", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Cancel", XmFONTLIST_DEFAULT_TAG),
   MailClose_Button = XtVaCreateManagedWidget("MailClose_Button",
 					     xmPushButtonWidgetClass,
 					     Mail_Form,
@@ -477,7 +477,7 @@ void OK_Attachment(Widget   w,
 {
   char *Filename;
 
-  if (!XmStringGetLtoR(cbs->value,XmSTRING_OS_CHARSET,&Filename))
+  if (!XmStringGetLtoR(cbs->value,XmFONTLIST_DEFAULT_TAG,&Filename))
     {
       XtUnrealizeWidget(w);
       return;      
@@ -514,7 +514,7 @@ void Open_Attachment_Dialog()
   XtVaSetValues(XtParent(W_FileDialog),
 		XmNtitle,"Attachment File Selector",
 		NULL,0);
-  DirString = XmStringCreate((char *)getenv("HOME"), XmSTRING_OS_CHARSET),
+  DirString = XmStringCreate((char *)getenv("HOME"), XmFONTLIST_DEFAULT_TAG),
   XtVaSetValues(W_FileDialog,
 		XmNtextColumns, 60,
 		XmNdirectory, DirString,

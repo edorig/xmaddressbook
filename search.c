@@ -189,7 +189,7 @@ void  Search_Form()
 					Search_Frame,
 					NULL,0);
   
-  LabelString = XmStringCreate("Enter Search String: ", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Enter Search String: ", XmFONTLIST_DEFAULT_TAG),
   Search_Label = XtVaCreateManagedWidget("Search_Label",
 					 xmLabelWidgetClass, 
 					 Search_Form,
@@ -226,7 +226,7 @@ void  Search_Form()
 					     XmNrightAttachment, XmATTACH_FORM,
 					     NULL,0);
   
-  LabelString = XmStringCreate("Search", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Search", XmFONTLIST_DEFAULT_TAG),
   SearchConfirm_Button = XtVaCreateManagedWidget("SearchConfirm_Button",
 						 xmPushButtonWidgetClass,
 						 Search_Form,
@@ -244,7 +244,7 @@ void  Search_Form()
                 (XtCallbackProc) Search_Confirm, Search_Text);
   
 
-  LabelString = XmStringCreate("Reset", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Reset", XmFONTLIST_DEFAULT_TAG),
   SearchReset_Button = XtVaCreateManagedWidget("SearchReset_Button",
 					       xmPushButtonWidgetClass,
 					       Search_Form,
@@ -262,7 +262,7 @@ void  Search_Form()
                 (XtCallbackProc) Search_Reset, Search_Text);
   
   
-  LabelString = XmStringCreate("Close", XmSTRING_OS_CHARSET),
+  LabelString = XmStringCreate("Close", XmFONTLIST_DEFAULT_TAG),
   SearchClose_Button = XtVaCreateManagedWidget("SearchClose_Button",
 					       xmPushButtonWidgetClass,
 					       Search_Form,

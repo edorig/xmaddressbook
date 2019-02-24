@@ -28,9 +28,9 @@ void  Exit_Program(Widget   w,
     }
   XtSetArg(args[0], XmNautoUnmanage, False);
   XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate("Exit program w/o saving?",
-                                                         XmSTRING_OS_CHARSET));
-  XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmSTRING_OS_CHARSET));
-  XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmSTRING_OS_CHARSET));
+                                                         XmFONTLIST_DEFAULT_TAG));
+  XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmFONTLIST_DEFAULT_TAG));
+  XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmFONTLIST_DEFAULT_TAG));
   XtSetArg(args[4], XmNtitle, "Exit Program");
   ExitProgram_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "ExitProgram_Dialog",
 							args, 5);
@@ -84,9 +84,9 @@ void SaveAndExit(Widget   w,
     }
   XtSetArg(args[0], XmNautoUnmanage, False);
   XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate("Save and Exit Program?",
-                                                         XmSTRING_OS_CHARSET));
-  XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmSTRING_OS_CHARSET));
-  XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmSTRING_OS_CHARSET));
+                                                         XmFONTLIST_DEFAULT_TAG));
+  XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmFONTLIST_DEFAULT_TAG));
+  XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmFONTLIST_DEFAULT_TAG));
   XtSetArg(args[4], XmNtitle, "Save and Exit Program");
   SaveAndExit_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "SaveAndExit_Dialog",
 							args, 5);
@@ -144,9 +144,9 @@ void SaveDontExit(Widget   w,
 
   XtSetArg(args[0], XmNautoUnmanage, False);
   XtSetArg(args[1], XmNmessageString, XmStringLtoRCreate("Save Current Address Book?",
-                                                         XmSTRING_OS_CHARSET));
-  XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmSTRING_OS_CHARSET));
-  XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmSTRING_OS_CHARSET));
+                                                         XmFONTLIST_DEFAULT_TAG));
+  XtSetArg(args[2], XmNokLabelString, XmStringCreate("Confirm",XmFONTLIST_DEFAULT_TAG));
+  XtSetArg(args[3], XmNcancelLabelString, XmStringCreate("Cancel",XmFONTLIST_DEFAULT_TAG));
   XtSetArg(args[4], XmNtitle, "Save");
   SaveDontExit_Popup = (Widget )XmCreateMessageDialog(W_TopLevel, "SaveDontExit_Dialog",
 							args, 5);
